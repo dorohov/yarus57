@@ -1,0 +1,110 @@
+.form-site{
+}
+.form-site__heading{
+	text-align: center;
+}
+.form-site__note{
+	text-align: center;
+	color: lighten(@black, 42.8%); //#6d6d6d
+	font-family: @beau;
+	@media @media-size-xs{margin-bottom: 35px;}
+	@media @media-notsmart{
+		font-size: @b-fs + 2px; //18px
+		line-height: @b-lh + 4px; //28px;
+		margin-bottom: 50px;
+	}
+}
+._frms__input{
+	&.icon{
+		position: relative;
+		&:before{
+			font-family: @icon;
+			position: absolute;
+			//color: @blue;
+			top: 50%;
+			right: 15px;
+			font-size: 20px;
+			line-height: 20px;
+			transform: translateY(-50%);
+			transition: @transition-site;
+		}
+		//&.icon-user:before{content: @icon-user;}
+		//&.icon-tel:before{content: @icon-tel;}
+		._frms__form-control{
+			padding-right: 50px;
+		}
+		&.focus{
+			&:before{
+				color: @white;
+			}
+		}
+	}
+}
+._frms__input,
+._frms__textarea{margin-bottom: 25px;}
+
+._frms__form-control{
+	background:	none;
+	border: 1px solid darken(@white, 24.5%); //#c1c1c1;    
+	height: 50px;
+	padding: 10px 20px;
+	background-color: @white;
+	font-size: @b-fs;
+	color: @black;
+	font-family: @beau;
+	transition: @transition-site;
+	border-radius: 5px;
+	&::-moz-placeholder{
+		transition: @transition-site;
+		font-family: @beau;
+		color: lighten(@black, 42.8%); //#6d6d6d
+	}
+	&::-webkit-input-placeholder {
+		transition: @transition-site;
+		font-family: @beau;
+		color: lighten(@black, 42.8%); //#6d6d6d
+	}
+	&:focus{
+		//background: lighten(@yellow-light, 10%); 	
+		border-color: @yellow-light;
+		//color: @white;
+		outline: none;
+		&::-moz-placeholder{
+			//color: @white;
+		}
+		&::-webkit-input-placeholder {
+			//color: @white;
+		}
+	}
+}
+textarea._frms__form-control{
+	height: 200px;
+	max-height: 200px;
+}
+._frms__row{
+	@media @media-device{flex-wrap: wrap; justify-content: center;}
+}
+._frms__cols{
+	width: 33.3333%;
+	@media @media-size-xs-p{width: 100%;}
+	@media @media-size-xs-l{width: 50%;}
+	@media @media-size-sm-p{width: 50%;}
+}
+
+.form-block{
+	border: 1px solid @yellow-light;
+	max-width: 1350px;
+	margin: 0 auto 80px;
+	border-radius: 10px;
+	background-color: darken(@white, 3%); //#f7f7f7
+	.bg(@img: "bg-form.png");
+	@media @media-size-xs{padding: 35px 25px 20px; margin-bottom: 50px;}
+	@media @media-size-sm{padding: 45px 35px 30px}
+	@media @media-size-mdl{padding: 45px 45px 30px}
+	@media @media-size-xl{padding: 45px 145px 30px}
+	@media @media-size-xxl{padding: 55px 145px 40px}
+	&.include-navbar-blog{
+		@media @media-size-xs{margin-right: 40px;}
+		@media @media-size-sm{margin-right: 60px;}
+	}
+}

@@ -1,0 +1,67 @@
+.include-custom-font(@family: @minion, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(@family: @minion, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-light, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-black, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-sans-light, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-sans, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-sans-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-sans-bold-ital, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @museo-sans-black, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @open, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @open-sbold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @beau-light, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @beau, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @beau-sbold, 		@weight: normal, @style: normal);
+
+.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
+
+@icon-fb: 			"\f100";
+@icon-inst: 		"\f101";
+@icon-location: 	"\f102";
+@icon-mail: 		"\f103";
+@icon-mailto: 		"\f104";
+@icon-next: 		"\f105";
+@icon-prev: 		"\f106";
+@icon-reload: 		"\f107";
+@icon-tel: 			"\f108";
+@icon-tw: 			"\f109";
+@icon-vk: 			"\f10a";
+@icon-arrow-left: 	"\f10b";
+@icon-arrow-right: 	"\f10c";
+@icon-close: 		"\f10d";
+@icon-zoom: 		"\f10e";
+@icon-search: 		"\f10f";
+
+/*@icon-prev: 		"\f100";
+@icon-tel: 			"\f101";
+@icon-close:		"\f102";
+@icon-mail: 		"\f103";
+@icon-mailto: 		"\f104";
+@icon-fb: 			"\f105";
+@icon-inst: 		"\f106";
+@icon-arrow-left: 	"\f107";
+@icon-location: 	"\f108";
+@icon-search: 		"\f109";
+@icon-next: 		"\f10a";
+@icon-reload: 		"\f10b";
+@icon-arrow-right: 	"\f10c";
+@icon-tw: 			"\f10d";
+@icon-vk: 			"\f10e";*/

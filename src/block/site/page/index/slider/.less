@@ -1,0 +1,79 @@
+.index-slider-block{
+	height: 820px;
+	@media @media-size-xs-p{height: 475px;}
+	@media @media-size-xs-l{height: 290px;}
+}
+._isp__heading-block{
+	position: absolute;
+	top: 245px;
+	left: 0;
+	color: @white;
+	width: 100%;
+	transition: @transition-site;
+	z-index: 3;
+	@media @media-size-xs{
+		top: 25px;
+	}
+	@media @media-notsmart{
+		top: 245px;
+	}
+}
+._isp__heading-small{
+	font-family: @museo;
+	font-size: @b-fs + 14px; //30px;
+	line-height: @b-lh + 14px; //38px;
+	display: inline-block;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	&.red{
+		background: @red;
+	}
+	&.green{
+		background: @green;
+	}
+	&.orange{
+		background: @orange;
+	}
+	@media @media-size-xs{
+		font-size: @b-fs + 4px; //20px;
+		line-height: @b-lh + 4px; //28px;
+	}
+}
+._isp__heading{	
+	font-family: @museo-black;
+	font-size: @b-fs + 40px; //56px;
+	line-height: @b-lh + 44px; //68px;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+    &.red span{
+		background: @red;
+	}
+	&.green span{
+		background: @green;
+	}
+	&.orange span{
+		background: @orange;
+	}
+	span{
+		display: inline-block;
+		padding: 0 20px;
+	}
+	@media @media-size-xs{
+		font-size: @b-fs + 18px; //34px;
+		line-height: @b-lh + 16px; //40px;
+		padding: 15px 0;
+	    &.red{
+			background: @red;
+		}
+		&.green{
+			background: @green;
+		}
+		&.orange{
+			background: @orange;
+		}
+	}
+}
+._isb__carousel{
+	.item{background-size: cover;}	
+}

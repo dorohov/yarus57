@@ -1,0 +1,50 @@
+.footer-site{
+	position: relative;
+	z-index: 5;
+	padding: 45px 0 35px;
+	color: @b-footer-color;
+	font-size: @b-fs - 4px; //12
+	line-height: @b-lh - 6px; //18
+	font-family: @museo-sans-light;
+	background-color: @b-footer-bg;	
+	background-image: url("@{url-path-img}/bg/bg-footer.png");
+	background-repeat: repeat;
+	background-position: center;
+	//opacity: @opacity;
+	a{
+		&, &:hover, &:focus{color: @b-footer-color;} 
+	}
+	@media @media-size-mdl{
+		padding: 35px 0 25px;
+	}
+	@media @media-size-xs{
+		text-align: center;
+		padding: 35px 0 15px;
+	}
+	&.include-navbar-blog{
+		@media @media-size-xs{padding-right: 40px;}
+		@media @media-size-sm{padding-right: 60px;}
+	}
+}
+._fs__row{
+	align-items: center;
+	justify-content: space-between;	
+	> .cols{		
+		@media @media-size-xs{width: 100%; margin-bottom: 20px;}
+	}
+}
+._fs__copyright-cols{}
+._fs__copyright__logo{
+	padding-top: 10px;
+	@media @media-size-xs{width: 105px; margin: 0 auto}
+	img{
+		width: 105px;
+	}
+}
+._fs__soc{
+	text-align: center;
+}
+._fs__dorohovdesign__logo{
+	padding-top: 10px;
+	@media @media-size-xs{width: 112px; margin: 0 auto}
+}

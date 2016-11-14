@@ -1,0 +1,65 @@
+.rubric-block{margin-bottom: 60px;}
+.rubric-site{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	> li {
+		list-style: none;
+		&.rubric-block__heading {
+			*{
+				color: @white;
+				text-transform: uppercase;
+				font-size: @b-fs + 2px; 	//18px
+				line-height: @b-lh + 2px;	// 26px
+				letter-spacing: 1px;
+			}
+		}
+		> a{  
+			color: darken(@white, 44.8%); //#8d8d8d;
+			font-size: @b-fs + 2px; 	//18px	
+			line-height: @b-lh + 3px;	//29px;			
+			position: relative;
+		    padding: 9px 25px;
+			position: relative;
+			border-bottom: 1px solid @yellow-light;
+			@media @media-size-xs{
+				font-size: @b-fs; 	//16px				
+			}
+			&, &:after, &:before{
+				transition: @transition-site;
+				display: block;
+			}
+			&:after, &:before{
+				content: '';
+				position: absolute;
+				top: 0%;
+				right: 0;
+				opacity: 0; 
+			}
+			&:before{
+				width: 20px;
+				height: 46px;
+				background: @white;
+			}
+			&:after{
+				border-top: 23px solid fadeout(@yellow-light, 100%);
+				border-bottom: 23px solid fadeout(@yellow-light, 100%);
+				border-left: 20px solid fadeout(@yellow-light, 0%);
+			}
+			&:hover{
+				color: @black;
+			}
+		}
+		&.active{
+			> a{
+				color: @white;
+				background: @yellow-light;
+				cursor: default;
+				border-bottom-color: fadeout(@yellow-light, 100%);
+				&:after, &:before{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
