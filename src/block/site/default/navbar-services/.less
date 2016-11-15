@@ -118,10 +118,7 @@
 	}
 	@media @media-screen{
 		position: relative;
-		padding: 0 0 0 10px;
-    	margin-top: -10px;
 	}
-    @media @media-size-mdl{padding: 15px 0;}
 }
 ._nbs__item-block{
 	@media @media-device{
@@ -158,3 +155,63 @@
     	}
 	}
 } 
+
+.navbar-nav-services{
+	ul{
+		list-style: none;
+		position: relative;
+		border: 2px solid @blue-grey;
+		margin: 0 0 20px;
+		padding: 0;
+		@media @media-screen{
+			margin: 0 0 65px;
+			padding: 0 0 45px;
+		}
+		> li{
+			> a{
+				display: block;
+				font-family: @museo-sans-bold;
+			    letter-spacing: 0.3px;
+			    transition: @transition-site;
+				font-size: @b-fs + 2px;
+				line-height: @b-lh + 3px;
+			    padding: 10px 30px;
+				@media @media-size-mdl {
+					font-size: @b-fs + 1px;
+					line-height: @b-lh + 2px;
+				    padding: 10px 25px;
+				}
+				&, &:focus{
+					color: #545454;
+				}
+				&:hover{
+					color: @black;
+				}
+			}
+			&.active{
+				> a{
+					background-color: @blue-grey;
+					color: @white;
+					cursor: default;
+				}
+			}
+		}
+	}
+}
+._nbs__btn-block{
+	border: 2px solid @blue-grey;
+	background: @white;
+	padding: 17px 20px;
+	@media @media-screen{
+		position: absolute;
+		bottom: 0px;
+		transform: translateY(50%);
+		left: 32px;
+		right: 32px;		
+	}
+	@media @media-size-mdl {
+		left: 23px;
+		right: 23px;
+		padding: 10px 13px;		
+	}
+}

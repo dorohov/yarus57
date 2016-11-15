@@ -231,3 +231,21 @@
     font-size: @b-fs + 2px; //18px;
     line-height: @b-lh + 2px; // 26px;
 }
+.btn-green-light{
+	&, &:hover, &:focus{color: @white;}
+	background: @green-light;
+}
+.btn-services{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: @b-fs + 2px;
+	line-height: @b-lh - 4px;
+	padding: 15px;
+	@media @media-size-mdl {
+		&._navbar{
+			font-size: @b-fs - 1px;
+			line-height: @b-lh - 4px;
+		}
+	}
+}

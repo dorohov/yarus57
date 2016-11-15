@@ -1,0 +1,35 @@
+.breadcrumb-site{
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+	> li{
+		margin: 0 5px 10px;
+		& + li{
+			&:before{
+				font-family: @icon;
+				content: @icon-next;
+				color: lighten(@black, 50%);
+				display: inline-block;
+				font-size: 10px;
+				margin-right: 10px;
+			}
+		}
+		> a{
+			color: lighten(@black, 50%);
+			transition: @transition-site;
+			border-bottom: 1px solid fadeout(@black, 80%);
+			&:hover{
+				color: @yellow-light;
+				border-color: fadeout(@black, 100%);
+			}
+		}
+		&.active{
+			color: lighten(@black, 70%);			
+		}
+
+	}
+}

@@ -59,3 +59,20 @@
 		&:hover{background: @yellow-light}
 	}
 }
+.block-item__rubric-box{
+	margin-top: -15px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.block-item__rubric{
+	display: inline-block;
+	background: @blue-grey;
+	padding: 5px 30px;
+	font-size: @b-fs + 2px; //18px;
+	line-height: @b-lh + 2px; //26px;
+	transition: @transition-site;
+	&, &:hover, &:focus{color: @white}
+	&:hover{background: @yellow-light}
+	&,
+	& + &{margin: 0 5px}
+}

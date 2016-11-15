@@ -37,22 +37,21 @@ ul{
 		margin-left: 0;
 		li{
 			position: relative;
-			padding-left: 20px;
 			margin-bottom: 6px;
+			padding-left: 40px;
 			&:before{
-				content: '';
+				content: @icon-next;
+				font-family: @icon;
 				position: absolute;
-				top: 50%;
-				top: 12px;
-				left: 0px;
-				width: 8px;
-				height: 8px;
-				background: @red;
+				left: 3px;
+				top: 5px;
+				background: @green-light;
+				width: 17px;
+				line-height: 17px;
 				border-radius: 50%;
-				display: block;   
-				text-align: center; 
-				//transform: translateY(-50%);
-				@media @media-size-xs{top: 10px;}
+				color: @white;
+				font-size: 8px;
+				text-align: center;
 			}
 		}
 	}
@@ -62,6 +61,9 @@ ul{
 }
 .soc-witget-block{
 	margin-bottom: 20px;
+}
+.visible-xs{
+	@media @media-notsmart{display: none;}
 }
 @adr_w: 390px;
 @adr_h: 230px;
