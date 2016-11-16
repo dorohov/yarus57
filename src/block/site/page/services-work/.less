@@ -1,0 +1,51 @@
+.servises-work-row{}
+.servises-work-cols{
+	width: 33.333%;
+	margin-bottom: 30px;
+	@media @media-size-xs{width: 100%;}
+	@media @media-size-sm{width: 50%;}
+}
+.servises-work-item{
+	height: 100%;
+    min-height: 350px;
+	@media @media-size-xs-l{min-height: 230px;}
+	&:before{display: none;}
+}
+.servises-work-item__preview{
+}
+.servises-work-item__inner{
+	padding: 15px 25px 10px;
+	background: fadeout(@white, 20%);
+}
+.servises-work-item__heading{
+	font-family: @museo-bold;
+	text-transform: uppercase;
+	font-size: @b-fs + 4px;
+}
+.servises-work-item__cost{
+	color: @yellow-light;
+	font-family: @museo-sans-black;
+	._ruble{
+		position: relative;
+		display: inline-block;		
+		font-size: @b-fs + 14px; //30px
+		line-height: @b-lh - 1px; //22px;
+		font-family: @museo-sans-black;
+		letter-spacing: 1px;
+		padding-right: 30px;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 25px;
+			height: 100%;
+			max-height: 23px;
+			transform: translateY(-55%);
+			background-image: url("@{url-path-img}/default/ruble-yellow.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		} 
+	}
+}

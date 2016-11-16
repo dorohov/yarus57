@@ -2,7 +2,7 @@
 <html dir="ltr" lang="ru-RU"> 
 	<head>
 		<meta charset="utf-8">	
-<title>k-57.ru</title>
+<title>yarus57.ru</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -88,9 +88,9 @@
 	<div class="row block-row services-row">
 
 		<div class="cols block-cols services-panel-cols">
-			<div class="navbar-services">		
-	<div class="_nbs__block">			
-		<div class="_nbs__item-block">
+			<div class="navbar-services navbar-second">		
+	<div class="_nbs__block navbar-second__block">			
+		<div class="navbar-second__block-inner">
 			<div class="navbar-nav-services">
 				<ul>
 					<li>
@@ -128,13 +128,13 @@
 					</li>
 
 				</ul>
-				<div class="_nbs__btn-block"><a href="#" class="btn-site btn-green-light btn-services _navbar">Услуги по видам работы</a></div>
+				<div class="_nbs__btn-block"><a href="/services-works.html" class="btn-site btn-green-light btn-services _navbar">Услуги по видам работы</a></div>
 			</div>
 		</div>	
 	</div>
-	<button class="_nbs__btn hamburger hamburger--elastic"   data-toggle-rnav=".navbar-services">
+	<button class="_nbs__btn navbar-second__hamburger hamburger hamburger--elastic"   data-toggle-rnav=".navbar-second">
 		<span class="hamburger-box">
-			<span class="hamburger-inner"></span>
+			<span class="hamburger-inner"></span> 
 		</span>
 	</button>
 </div>	
@@ -161,7 +161,7 @@
 					</div>
 				</div>
 				<div class="_si__btn-block">
-					<button type="button" class="btn-site btn-yellow-light btn-services" >Оставить заявку</button>
+					<button data-toggle="modal" data-target="#modal-order" type="button" class="btn-site btn-yellow-light btn-services"  >Оставить заявку</button>
 				</div>
 			</div>
 			<div class="services-item">
@@ -187,7 +187,7 @@
 					</div>
 				</div>
 				<div class="_si__btn-block">
-					<button type="button" class="btn-site btn-yellow-light btn-services" >Оставить заявку</button>
+					<button data-toggle="modal" data-target="#modal-order" type="button" class="btn-site btn-yellow-light btn-services"  >Оставить заявку</button>
 				</div>
 			</div>
 			<div class="services-item">
@@ -215,7 +215,7 @@
 					</div>
 				</div>
 				<div class="_si__btn-block">
-					<button type="button" class="btn-site btn-yellow-light btn-services" >Оставить заявку</button>
+					<button data-toggle="modal" data-target="#modal-order" type="button" class="btn-site btn-yellow-light btn-services"  >Оставить заявку</button>
 				</div>
 			</div>
 			<div class="services-item">
@@ -244,7 +244,7 @@
 					</div>
 				</div>
 				<div class="_si__btn-block">
-					<button type="button" class="btn-site btn-yellow-light btn-services" >Оставить заявку</button>
+					<button data-toggle="modal" data-target="#modal-order" type="button" class="btn-site btn-yellow-light btn-services"  >Оставить заявку</button>
 				</div>
 			</div>
 		</div>
@@ -274,6 +274,31 @@
 	</div>
 </form> 	
 		</div>
+
+		<div class="modal fade" id="modal-order" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog _msr__dialog">
+		<div class="modal-content _msr__content">
+			<div class="modal-body _msr__body" >
+				<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+				<div class="modal-block _msr__block">		
+					<h3 class="modal-title _msr__title">Оставить заявку.</h3>	
+					<form action="#" class="form-site _fpc__form">
+	<div class="_frms__input icon icon-user">
+		<input type="text" class="_frms__form-control form-control validate[required]" id="f[b_name]" placeholder="Ваше имя">
+	</div>	
+	<div class="_frms__input icon icon-tel">
+		<input type="text" class="_frms__form-control form-control validate[required]"  id="f[b_phone]" placeholder="Ваш телефон или e-mail">
+	</div>	
+	<div class="_frms__input _frms__btn">
+		<button type="submit" class="btn-site btn-yellow-light btn-submit">Отправить</button>
+	</div>	
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>  
+
 		<footer class="footer-site include-navbar-services">	
 	<div class="container">
 		<div class="row _fs__row">

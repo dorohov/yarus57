@@ -27,7 +27,7 @@
     max-width: 295px;    
 	font-family: @beau;
     font-size: @b-fs + 2px; //18px
-}
+} 
 .soc-site{
 	padding-top: 10px;
 }
@@ -135,7 +135,11 @@
 	height: 180px;
 	background-image: url("@{url-path-img}/default/icon-map-btn.png");
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;		
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-name: animated-btn;
 	@media @media-size-xs{
 		margin: 0 auto;
 		width: 120px;
@@ -163,6 +167,29 @@
 		width: 140px;
 		height: 160px;
 		background-size: cover;
+	}
+}
+@keyframes animated-btn {	
+	from {
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0px, -15px);
+	}
+	35%{
+		transform: translate(-10px, -15px);
+	}
+	50%{
+		transform: translate(-10px, -10px);
+	}
+	65%{
+		transform: translate(0px, -10px);
+	}
+	80%{
+		transform: translate(-10px, 0px);
+	}
+	to{
+		transform: translateX(0, 0); 
 	}
 }
 .btn-close{

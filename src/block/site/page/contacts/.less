@@ -141,7 +141,7 @@ a,div{
 				content: @icon-tel;
 			}
 		}
-		&.icon-location{
+		&.icon-location{ cursor: pointer;
 			@media @media-screen{font-size: @b-fs + 6px; }
 			@media @media-size-xxl{font-size: @b-fs + 10px; }
 			&:before{
@@ -170,10 +170,18 @@ a,div{
 			&:before{
 				content: @icon-tw;
 			}
+			&:hover{
+				color: @color-tw;
+				&:before{background: @color-tw;}
+			}
 		}
 		&.icon-inst{
 			&:before{
 				content: @icon-inst;
+			}
+			&:hover{
+				color: @color-inst;
+				&:before{background: @color-inst;}
 			}
 		}
 	}

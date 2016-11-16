@@ -195,6 +195,11 @@
 	@media @media-device{flex-wrap: wrap;}
 	> li{			
 		@media @media-device{margin-bottom: 10px; width: 100%;}
+		@media @media-size-xs-l{
+			width: 33.3333%;
+			&:nth-of-type(3n+2){text-align: center;}
+			&:nth-of-type(3n+3){text-align: right;}
+		}
 		@media @media-screen{margin-bottom: 0;}
 		> a{
 			position: relative;
@@ -205,6 +210,7 @@
 			@media @media-device{
 				display: inline-block;				
 		   		padding: 8px 0px;
+		   		font-size: @b-fs;
 			}
 			@media @media-screen{
 				font-size: @b-fs; 
