@@ -3,11 +3,7 @@ var snb = $('.navbar-site.index');
 if(snb.hasClass('scroll-sidebar')) {
 	if(topPos < 500) {
 		snb.removeClass('scroll-sidebar');
-	} /*else {		
-		if(snb.hasClass('open-scroll-sidebar')) {
-			snb.removeClass('open-scroll-sidebar');
-		}		
-	}*/
+	} 
 } else {
 	if(topPos > 500) {
 		snb.addClass('scroll-sidebar');

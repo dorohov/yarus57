@@ -70,6 +70,29 @@ ul{
 .visible-xs{
 	@media @media-notsmart{display: none;}
 }
+.icon-ruble{
+	&:after{
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 100%;
+	} 
+	&.yellow{
+		&:after{
+			background-image: url("@{url-path-img}/default/ruble-yellow.png");
+		}
+	} 
+	&.white{
+		&:after{
+			background-image: url("@{url-path-img}/default/ruble.png");
+		}
+	}	
+}
 /*
 ._czr__loader{
 	position: fixed;

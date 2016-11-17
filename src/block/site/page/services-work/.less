@@ -1,17 +1,16 @@
 .servises-work-row{}
 .servises-work-cols{
-	width: 33.333%;
 	margin-bottom: 30px;
-	@media @media-size-xs{width: 100%;}
 	@media @media-size-sm{width: 50%;}
+	@media @media-screen{width: 33.3333%;}
 }
 .servises-work-item{
 	height: 100%;
     min-height: 350px;
 	@media @media-size-xs-l{min-height: 230px;}
-	&:before{display: none;}
 }
 .servises-work-item__preview{
+	&:before{display: none;}
 }
 .servises-work-item__inner{
 	padding: 15px 25px 10px;
@@ -34,18 +33,9 @@
 		letter-spacing: 1px;
 		padding-right: 30px;
 		&:after{
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: 0;
 			width: 25px;
-			height: 100%;
 			max-height: 23px;
 			transform: translateY(-55%);
-			background-image: url("@{url-path-img}/default/ruble-yellow.png");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
 		} 
 	}
 }

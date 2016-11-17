@@ -1,17 +1,12 @@
-.work-cols{
-	width: 50%;
+.work-cols{	
 	margin-bottom: 30px;
-	@media @media-size-xs{width: 100%;}
+	@media @media-notsmart{width: 50%;}
 }
 .work-item{	
-	@media @media-size-xs-l{min-height: 220px;}
 	min-height: 325px;
-	&.onhover{
-		.work-item__onhover{transform: translate(-50%, 0%);}
-	}
+	@media @media-size-xs-l{min-height: 220px;}
 }
 .work-item__heading{
-	color: @black;
 	font-family: @museo-bold;
 	margin-bottom: 5px;
 }
