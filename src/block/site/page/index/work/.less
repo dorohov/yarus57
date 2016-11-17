@@ -61,6 +61,11 @@
 			border-bottom: 2px solid fadeout(@white, 100%);
 			transition: @transition-site;
 			padding: 5px 0;
+			@media @media-size-xs{
+				display: inline-block;
+				line-height: 18px;
+				border-bottom: 0;
+			}
 			@media @media-notsmart{display: block;}
 			&, &:focus{
 				color: @white;
@@ -74,6 +79,7 @@
 				border-color: @white;
 				cursor: default;
 				color: @white;
+				@media @media-size-xs{text-shadow: 1px 1px fadeout(@black, 50%)}
 			}
 		}
 	}

@@ -422,7 +422,8 @@ textarea._frms__form-control{
 	//font-family: @open-sbold;
 	font-family: @museo-sans-bold;
 	margin-bottom: 0;
-	@media @media-device	{font-size: @b-fs + 8px; line-height: @b-lh + 10px;} 	// 24/30
+	@media @media-size-xs {text-align: center}
+	@media @media-device	{font-size: @b-fs + 8px; line-height: @b-lh + 10px; } 	// 24/30
 	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 22px;} 	// 36/42
 }
 .modal-btn-close{
@@ -649,11 +650,13 @@ textarea._frms__form-control{
 		&.yellow-white{display: none;}
 		@media @media-device{
 			&.dark{display: none}
-			&.white{display: block}
+			&.white{display: none}
+			&.white-xs{display: block}
 		}
 		@media @media-screen{
 			&.dark{display: block}
 			&.white{display: none}
+			&.white-xs{display: none}
 		}
 		@media @media-size-xs{width: 130px;}
 		@media @media-size-sm{width: 165px;}
@@ -2678,6 +2681,85 @@ a,div{
 	    }
 	}
 }
+.index-slider-block{
+	height: 820px;
+	@media @media-size-xs-p{height: 475px;}
+	@media @media-size-xs-l{height: 290px;}
+}
+._isp__heading-block{
+	position: absolute;
+	top: 245px;
+	left: 0;
+	color: @white;
+	width: 100%;
+	transition: @transition-site;
+	z-index: 3;
+	@media @media-size-xs{
+		top: 25px;
+	}
+	@media @media-notsmart{
+		top: 245px;
+	}
+}
+._isp__heading-small{
+	font-family: @museo;
+	font-size: @b-fs + 14px; //30px;
+	line-height: @b-lh + 14px; //38px;
+	display: inline-block;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	&.red{
+		background: @red;
+	}
+	&.green{
+		background: @green;
+	}
+	&.orange{
+		background: @orange;
+	}
+	@media @media-size-xs{
+		font-size: @b-fs + 4px; //20px;
+		line-height: @b-lh + 4px; //28px;
+	}
+}
+._isp__heading{	
+	font-family: @museo-black;
+	font-size: @b-fs + 40px; //56px;
+	line-height: @b-lh + 44px; //68px;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+    &.red span{
+		background: @red;
+	}
+	&.green span{
+		background: @green;
+	}
+	&.orange span{
+		background: @orange;
+	}
+	span{
+		display: inline-block;
+		padding: 0 20px;
+	}
+	@media @media-size-xs{
+		font-size: @b-fs + 18px; //34px;
+		line-height: @b-lh + 16px; //40px;
+		padding: 15px 0;
+	    &.red{
+			background: @red;
+		}
+		&.green{
+			background: @green;
+		}
+		&.orange{
+			background: @orange;
+		}
+	}
+}
+._isb__carousel{
+	.item{background-size: cover;}	
+}
 .index-work-block{
 	padding: 60px 0;
 	background: @green-light;
@@ -2741,6 +2823,11 @@ a,div{
 			border-bottom: 2px solid fadeout(@white, 100%);
 			transition: @transition-site;
 			padding: 5px 0;
+			@media @media-size-xs{
+				display: inline-block;
+				line-height: 18px;
+				border-bottom: 0;
+			}
 			@media @media-notsmart{display: block;}
 			&, &:focus{
 				color: @white;
@@ -2754,6 +2841,7 @@ a,div{
 				border-color: @white;
 				cursor: default;
 				color: @white;
+				@media @media-size-xs{text-shadow: 1px 1px fadeout(@black, 50%)}
 			}
 		}
 	}
@@ -2841,83 +2929,4 @@ a,div{
 	background-position: center;
 	transition: @transition-site;
 	transform-origin: center;
-}
-.index-slider-block{
-	height: 820px;
-	@media @media-size-xs-p{height: 475px;}
-	@media @media-size-xs-l{height: 290px;}
-}
-._isp__heading-block{
-	position: absolute;
-	top: 245px;
-	left: 0;
-	color: @white;
-	width: 100%;
-	transition: @transition-site;
-	z-index: 3;
-	@media @media-size-xs{
-		top: 25px;
-	}
-	@media @media-notsmart{
-		top: 245px;
-	}
-}
-._isp__heading-small{
-	font-family: @museo;
-	font-size: @b-fs + 14px; //30px;
-	line-height: @b-lh + 14px; //38px;
-	display: inline-block;
-	padding: 5px 20px;
-	margin-bottom: 10px;
-	&.red{
-		background: @red;
-	}
-	&.green{
-		background: @green;
-	}
-	&.orange{
-		background: @orange;
-	}
-	@media @media-size-xs{
-		font-size: @b-fs + 4px; //20px;
-		line-height: @b-lh + 4px; //28px;
-	}
-}
-._isp__heading{	
-	font-family: @museo-black;
-	font-size: @b-fs + 40px; //56px;
-	line-height: @b-lh + 44px; //68px;
-	display: flex;
-	flex-direction: column;
-    align-items: flex-start;
-    &.red span{
-		background: @red;
-	}
-	&.green span{
-		background: @green;
-	}
-	&.orange span{
-		background: @orange;
-	}
-	span{
-		display: inline-block;
-		padding: 0 20px;
-	}
-	@media @media-size-xs{
-		font-size: @b-fs + 18px; //34px;
-		line-height: @b-lh + 16px; //40px;
-		padding: 15px 0;
-	    &.red{
-			background: @red;
-		}
-		&.green{
-			background: @green;
-		}
-		&.orange{
-			background: @orange;
-		}
-	}
-}
-._isb__carousel{
-	.item{background-size: cover;}	
 }
