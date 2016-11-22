@@ -1,3 +1,45 @@
+	.go-to-top {
+		position:fixed;
+		opacity:0;
+		z-index:-1;
+		bottom:120%;
+		right:20px;
+		content:'';
+		display:inline-block;
+		width:1px;
+		height:1px;
+		//#fe.brep();
+		//#fe.bpos();
+		//#fe.bi('go-to-top.png');
+		text-decoration:none;
+		
+		transition:all 0.999s ease;
+		@media @media-device{display: none;}
+		&:before{
+			font-family: @icon;
+			content: @icon-next;
+			background: @blue-grey;
+			color: @white;
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			line-height: 65px;
+			transform: rotate(-90deg);
+			transition:all 0.999s ease;
+		}
+		
+		&.active {
+			width:65px;
+			height:65px;
+			bottom:10%;
+			opacity:1;
+			z-index:15;
+			&:hover {
+				transform:scale(1.2);
+				&:before{background: @yellow-light}
+			}
+		}
+	}
 .block-row{
 	flex-wrap: wrap;
 }
@@ -559,7 +601,7 @@ textarea._frms__form-control{
 		position:relatuve;
 		z-index: 5;
 		&.index{
-			background: fadeout(@black, 80%);
+			background: fadeout(@black, 50%);
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -1063,8 +1105,12 @@ textarea._frms__form-control{
 		margin: 0 0 20px;
 		padding: 0;
 		@media @media-screen{
-			margin: 0 0 65px;
-			padding: 0 0 45px;
+			margin: 45px 0 20px;
+			padding: 45px 0 0;
+		}
+		@media @media-size-mdl {
+			margin: 38px 0 20px;
+			padding: 40px 0 0;
 		}
 		> li{
 			> a{
@@ -1073,18 +1119,19 @@ textarea._frms__form-control{
 			    letter-spacing: 0.3px;
 			    transition: @transition-site;
 				font-size: @b-fs + 2px;
-				line-height: @b-lh + 3px;
+				line-height: @b-lh - 2px;
 			    padding: 10px 30px;
 				@media @media-size-mdl {
 					font-size: @b-fs + 1px;
-					line-height: @b-lh + 2px;
+					line-height: @b-lh - 4px;
 				    padding: 10px 25px;
 				}
 				&, &:focus{
 					color: #545454;
 				}
 				&:hover{
-					color: @black;
+					background-color: @blue-grey;
+					color: @white;
 				}
 			}
 			&.active{
@@ -1103,7 +1150,7 @@ textarea._frms__form-control{
 	padding: 17px 20px;
 	@media @media-screen{
 		position: absolute;
-		bottom: 0px;
+		top: -90px;
 		transform: translateY(50%);
 		left: 32px;
 		right: 32px;		
@@ -1111,6 +1158,7 @@ textarea._frms__form-control{
 	@media @media-size-mdl {
 		left: 23px;
 		right: 23px;
+		top: -75px;
 		padding: 10px 13px;		
 	}
 }
@@ -1758,7 +1806,7 @@ a,div{
 }
 .services-item{
 	border: 2px solid @yellow-light;
-	padding: 25px;
+	padding: 25px 25px 70px;
 	background-image: url("@{url-path-img}/bg/bg-services.png");
 	background-repeat: no-repeat;
 	background-position: right bottom;
@@ -1776,6 +1824,12 @@ a,div{
 	}
 	@media @media-size-sm{
 		background-size: 100px auto;
+	}
+}
+._si__scroller{
+	@media @media-size-xxl{height: 800px;}
+	.mCustomScrollBox{
+		padding-right: 30px;
 	}
 }
 ._si__row{
@@ -1798,7 +1852,12 @@ a,div{
 	display: block;	
 	@media @media-size-xs {height: 300px; margin: 0 auto}
 	@media @media-size-xs-l {height: 200px;}
-	@media @media-size-sm {max-height: 400px;}
+	@media @media-size-sm {max-height: 400px; min-height: 260px;}
+	@media @media-screen{
+		.block-item__preview-inner {
+		    min-height: 478px;
+		}
+	}
 }
 ._si__note{	
 	._sip__item &{
@@ -1894,7 +1953,7 @@ a,div{
 ._si__list{
 	list-style: none;
 	padding: 0;
-	margin: 0 0 55px;
+	margin: 0;
 	font-size: @b-fs;
 	line-height: @b-lh - 4px;
 	@media @media-size-xs{
@@ -2707,14 +2766,14 @@ a,div{
 	line-height: @b-lh + 14px; //38px;
 	display: inline-block;
 	padding: 5px 20px;
-	margin-bottom: 10px;
-	&.red{
+	margin-bottom: 10px;	
+	._isp__heading-block[data-class-color="red"] & {
 		background: @red;
 	}
-	&.green{
+	._isp__heading-block[data-class-color="green"] & {
 		background: @green;
 	}
-	&.orange{
+	._isp__heading-block[data-class-color="orange"] & {
 		background: @orange;
 	}
 	@media @media-size-xs{
@@ -2729,13 +2788,13 @@ a,div{
 	display: flex;
 	flex-direction: column;
     align-items: flex-start;
-    &.red span{
+    ._isp__heading-block[data-class-color="red"] & span{
 		background: @red;
 	}
-	&.green span{
+	._isp__heading-block[data-class-color="green"] & span{
 		background: @green;
 	}
-	&.orange span{
+	._isp__heading-block[data-class-color="orange"] & span{
 		background: @orange;
 	}
 	span{

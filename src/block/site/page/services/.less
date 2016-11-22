@@ -17,7 +17,7 @@
 }
 .services-item{
 	border: 2px solid @yellow-light;
-	padding: 25px;
+	padding: 25px 25px 70px;
 	background-image: url("@{url-path-img}/bg/bg-services.png");
 	background-repeat: no-repeat;
 	background-position: right bottom;
@@ -35,6 +35,12 @@
 	}
 	@media @media-size-sm{
 		background-size: 100px auto;
+	}
+}
+._si__scroller{
+	@media @media-size-xxl{height: 800px;}
+	.mCustomScrollBox{
+		padding-right: 30px;
 	}
 }
 ._si__row{
@@ -57,7 +63,12 @@
 	display: block;	
 	@media @media-size-xs {height: 300px; margin: 0 auto}
 	@media @media-size-xs-l {height: 200px;}
-	@media @media-size-sm {max-height: 400px;}
+	@media @media-size-sm {max-height: 400px; min-height: 260px;}
+	@media @media-screen{
+		.block-item__preview-inner {
+		    min-height: 478px;
+		}
+	}
 }
 ._si__note{	
 	._sip__item &{
@@ -153,7 +164,7 @@
 ._si__list{
 	list-style: none;
 	padding: 0;
-	margin: 0 0 55px;
+	margin: 0;
 	font-size: @b-fs;
 	line-height: @b-lh - 4px;
 	@media @media-size-xs{
