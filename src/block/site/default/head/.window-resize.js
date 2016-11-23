@@ -19,7 +19,6 @@ if (device.tablet()) {
 if (device.mobile()) {
 	$('._isb__carousel').removeAttr('data-ride');
 	$('._isb__carousel').carousel('pause');
-
 }
 if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');

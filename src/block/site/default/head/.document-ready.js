@@ -6,7 +6,8 @@ $('.navbar-nav__razdel a[href="'+url+'"]').parent().addClass('active');
 $('.navbar-nav-services a[href="'+url+'"]').parent().addClass('active'); 
 $('._ipc__slider-carousel .item').eq(0).addClass('active');
 $('._isb__carousel').carousel({
-	interval: 4000
+	interval: 4000,
+	pause: false
 });
 
 $('.text-block table').addClass('table table-striped');
