@@ -36,6 +36,16 @@
 	@media @media-size-sm{
 		background-size: 100px auto;
 	}
+	.more{
+		border-bottom: 1px dashed; cursor: pointer;
+		transition: @transition-site;
+		&:hover, &.active{
+			border-bottom-color: fadeout(@black, 100%);
+		}
+	}
+	.accordion{
+		display: none;
+	}
 }
 ._si__scroller{
 	@media @media-size-xxl{height: 800px;}
@@ -62,8 +72,14 @@
 	position: relative;
 	display: block;	
 	@media @media-size-xs {
-		height: 300px; margin: 0 auto;
-		.block-item__preview-inner{height: 300px; display: block}
+		min-width: 200px;
+		height: 300px; 
+		margin: 0 auto;
+		.block-item__preview-inner{
+			min-width: 200px;
+			height: 300px; 
+			display: block;
+		}
 	}
 	@media @media-size-xs-l {height: 200px;}
 	@media @media-size-sm {max-height: 400px; min-height: 260px;}
