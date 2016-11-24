@@ -61,7 +61,10 @@
 ._si__preview{
 	position: relative;
 	display: block;	
-	@media @media-size-xs {height: 300px; margin: 0 auto}
+	@media @media-size-xs {
+		height: 300px; margin: 0 auto;
+		.block-item__preview-inner{height: 300px; display: block}
+	}
 	@media @media-size-xs-l {height: 200px;}
 	@media @media-size-sm {max-height: 400px; min-height: 260px;}
 	@media @media-screen{
