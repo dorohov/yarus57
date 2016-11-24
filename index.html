@@ -113,9 +113,9 @@
 		
 		<div class="index-calc-block">
 	<h4 class="_iclb__heading">Рассчитайте стоимость вашего ремонта прямо сейчас:</h4>
-	<form action="#" class="tab-content">
+	<form action="#" class="tab-content azbn-valid-form">
 		<div class="tab-pane active fade in" id="step1">
-			<div class="row">
+			<div class="row azbn-step" data-azbn-step="1" >
 				<div class="cols _iclb__cols _border">
 					<div class="_iclb__step-item _right">
 						<div class="_iclb__title">1. Выберите тип ремонта:</div>
@@ -172,7 +172,7 @@
 		</div>
 		<div class="tab-pane fade" id="step2">
 			<div class="_iclb__step-item ">	
-				<div class="row _iclb__item-row _step2">
+				<div class="row _iclb__item-row _step2 azbn-step" data-azbn-step="2" >
 					<div class="cols">
 						<div class="_iclb__title _step2">3. Выберите тип дома:</div>
 					</div>
@@ -217,9 +217,9 @@
 			</div>
 		</div>
 		<div class="tab-pane fade" id="step3">
-			<div class="_iclb__step-item _step3">
+			<div class="_iclb__step-item _step3" >
 				<div class="_iclb__title">4. Введите номер Вашего телефона для получения расчета.</div>
-				<div class="row _iclb__item-row">
+				<div class="row _iclb__item-row azbn-step" data-azbn-step="3" >
 					<div class="cols">
 						<label class="calc-label">
 							<input type="tel" class="calc-input tel">
@@ -582,6 +582,8 @@
 <script src="/plugins/jquery.scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="/js/retina.min.js" ></script>
 
+<script src="/js/jquery.jqfeShowMoreBtn.js" ></script>
+<script src="/js/azbn.js" ></script>
 
 	</body>
 </html> 
