@@ -21,15 +21,16 @@ $('.fancybox').fancybox({
 $('.fancybox-buttons').fancybox({
 	openEffect  : 'none',
 	closeEffect : 'none',
+	padding: 0,
 	//prevEffect : 'none',
 	//nextEffect : 'none',
-	closeBtn  : false,
-	helpers : {
+	//closeBtn  : false,
+	/*helpers : {
 		title : {
 			type : 'inside'
 		},
 		buttons	: {}
-	},
+	},*/
 	afterLoad : function() {
 		this.title = this.title;
 	}

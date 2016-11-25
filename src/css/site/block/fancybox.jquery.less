@@ -1,0 +1,102 @@
+.fancybox-outer{
+	overflow: hidden;
+}
+.fancybox-close {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	cursor: pointer;
+	z-index: 8045;
+	&:before{
+		font-family: @icon;
+		content: @icon-close;
+		background: @black;
+		//border: 2px solid @white;
+		color: @white;
+		display: block;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		transition: @transition-site;
+	}
+	&:hover{
+		&:before{
+			border-color: @yellow-light;
+			background: @yellow-light;
+		}
+	}
+}
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	//background: transparent url('blank.gif'); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+	background: fadeout(@black, 40%);
+	transition: @transition-site;
+	@media @media-device{width: 45px;}	
+	@media @media-screen{width: 70px;}
+	&:hover{
+		background: fadeout(@black, 20%);
+		span:before{
+			transform: scale(1.2);
+		}
+	}
+}
+
+.fancybox-prev {
+	@media @media-device{left: 0;}		
+	@media @media-screen{		
+		left: -70px;
+		.fancybox-outer:hover &{
+			left: 0;
+			transition: 0.6s all;
+		}
+	}
+}
+
+.fancybox-next {
+	@media @media-device{right: 0;}		
+	@media @media-screen{		
+		right: -70px;
+		.fancybox-outer:hover &{
+			right: 0;
+			transition: 0.6s all;
+		}
+	}
+}
+
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	cursor: pointer;
+	z-index: 8040;
+	background: none;
+	&:before{
+		display: block;
+		font-family: @icon;
+		font-size: 30px;
+		color: @white;
+		transition: @transition-site;
+		@media @media-size-xs{font-size: 20px;}
+	}
+}
+
+.fancybox-prev span {
+	transform: translate(-55%, -50%);
+	&:before{
+		content: @icon-prev;
+	}
+}
+
+.fancybox-next span {
+	transform: translate(-45%, -50%);
+	&:before{
+		content: @icon-next;
+	}
+}
