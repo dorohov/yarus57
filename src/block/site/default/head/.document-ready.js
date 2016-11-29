@@ -22,8 +22,8 @@ $('.fancybox-buttons').fancybox({
 	openEffect  : 'none',
 	closeEffect : 'none',
 	padding: 0,
-	//prevEffect : 'none',
-	//nextEffect : 'none',
+	prevEffect : 'none',
+	nextEffect : 'none',
 	//closeBtn  : false,
 	/*helpers : {
 		title : {
