@@ -15,6 +15,12 @@ $(function(){
 	
 	(function(){
 		
+		$('[data-masked="phone"]').mask('(999) 999-9999');
+		
+	})();
+	
+	(function(){
+		
 		
 		$('.azbn-jqfeShowMoreBtn-btn')
 			.jqfeShowMoreBtn({
@@ -99,7 +105,7 @@ $(function(){
 						var input = $(this);
 						var val = (input.val() || 0);
 						
-						if(val != '' && val.length > 5) {
+						if(val != '' && val.length > 8) {
 							block.find('.btn-site.btn-calc').removeClass('azbn-hidden');
 						} else {
 							block.find('.btn-site.btn-calc').addClass('azbn-hidden');
