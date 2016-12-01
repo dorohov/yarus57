@@ -24,6 +24,7 @@ $('.fancybox-buttons').fancybox({
 	padding: 0,
 	prevEffect : 'none',
 	nextEffect : 'none',
+	nextClick : true,
 	//closeBtn  : false,
 	/*helpers : {
 		title : {

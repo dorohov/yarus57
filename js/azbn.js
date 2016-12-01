@@ -15,7 +15,7 @@ $(function(){
 	
 	(function(){
 		
-		$('[data-masked="phone"]').mask('(999) 999-9999');
+		$('[data-masked="phone"]').mask('+7 (999) 999-9999');
 		
 	})();
 	
