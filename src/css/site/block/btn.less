@@ -34,23 +34,92 @@
 .soc-site-item{
 	display: inline-block;
 	margin-right: 5px;
-	&.rect{
+	&:before{
+		font-family: @icon;
+		display: block;
+		width: 36px;
+		line-height: 36px;
+		font-size: 30px;
+		text-align: center;
+		transition: @transition-site;
+		cursor: pointer;
+	}
+	&.icon-vk{
 		&:before{
-			font-family: @icon;
-			display: block;
+			content: @icon-vk;
+		}		
+	}
+	&.icon-fb{
+		&:before{
+			content: @icon-fb;
+		}
+	}
+	&.icon-tw{
+		&:before{
+			content: @icon-tw;
+		}
+	}
+	&.icon-inst{
+		&:before{
+			content: @icon-inst;
+		}
+	}
+	&.round{
+		&:before{
+			border: 2px solid @white;
+			color: @white;
 			width: 36px;
-			line-height: 36px;
-			font-size: 30px;
-			color: @yellow-light;
-			background: @white;
-			text-align: center;
-			transition: @transition-site;
-			cursor: pointer;
+			line-height: 32px;
+			border-radius: 50%;
+			font-size: 20px;
+			@media @media-device{
+				width: 40px;
+				line-height: 36px;
+				font-size: 24px;
+			}
+			@media @media-screen{
+				border: 2px solid @yellow-light;
+				color: @yellow-light;				
+			}
+			@media @media-size-md{
+				border: 1px solid @white;
+				width: 26px;
+				line-height: 24px;
+				font-size: 16px;
+			}
+			.navbar-site.index &{
+				border: 2px solid @white;
+				color: @white;
+			}
 		}
 		&.icon-vk{
-			&:before{
-				content: @icon-vk;
+			&:hover{
+				&:before{
+					border-color: @color-vk;
+					background: @color-vk;
+				}
 			}
+		}
+		&.icon-fb{
+			&:hover{
+				&:before{
+					border-color: @color-fb;
+					background: @color-fb;
+				}
+			}
+		}
+		&:hover{
+			&::before{
+				color: @white;
+			}
+		}
+	}
+	&.rect{
+		&:before{
+			color: @yellow-light;
+			background: @white;
+		}
+		&.icon-vk{
 			&:hover{
 				&:before{
 					color: @white;
@@ -59,9 +128,6 @@
 			}
 		}
 		&.icon-fb{
-			&:before{
-				content: @icon-fb;
-			}
 			&:hover{
 				&:before{
 					color: @white;
@@ -70,9 +136,6 @@
 			}
 		}
 		&.icon-tw{
-			&:before{
-				content: @icon-tw;
-			}
 			&:hover{
 				&:before{
 					color: @white;
@@ -81,9 +144,6 @@
 			}
 		}
 		&.icon-inst{
-			&:before{
-				content: @icon-inst;
-			}
 			&:hover{
 				&:before{
 					color: @white;

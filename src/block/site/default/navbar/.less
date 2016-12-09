@@ -1,4 +1,4 @@
-.navbar-site{
+.navbar-site{  
 	transition: @transition-site;
 	@media @media-device{
 		position: fixed;
@@ -237,13 +237,22 @@
 }
 .navbar-nav-cols{
 	width: 65%;
+	width: 60%;
 	@media @media-device {width: 100%; margin-bottom: 20px;}
-	@media @media-size-lg{width: 70%;}
+	//@media @media-size-lg{width: 70%;}
+}
+.navbar-soc-cols{
+	@media @media-device {width: 100%; margin-bottom: 30px}
+	@media @media-screen{
+		width: 13%;
+		text-align: center;
+	}
 }
 .navbar-contacts-cols{
 	width: 35%;
+	width: 27%;
 	@media @media-device {width: 100%;}
-	@media @media-size-lg{width: 30%;}
+	//@media @media-size-lg{width: 30%;}
 }
 
 .navbar-nav{
@@ -256,7 +265,10 @@
 	margin: 0;
 	@media @media-device{flex-wrap: wrap;}
 	> li{			
-		@media @media-device{margin-bottom: 10px; width: 100%;}
+		@media @media-device{
+			margin-bottom: 10px; width: 100%;
+			&:last-child{margin-bottom: 0}
+		}
 		@media @media-size-xs-l{
 			width: 33.3333%;
 			&:nth-of-type(3n+2){text-align: center;}
@@ -348,7 +360,6 @@
 	@media @media-screen{
 		text-align: right;
 	}
-
 }
 .navbar-contacts__item{
 	display: inline-block;
@@ -363,10 +374,16 @@
 		@media @media-size-sm{
 			font-size: @b-fs + 4px; // 22;
 		}
-		@media @media-size-mdl{
-			font-size: @b-fs + 6px; // 22;
+		@media @media-size-md{
+			font-size: @b-fs + 2px; // 18;
+		}
+		@media @media-size-lg{
+			font-size: @b-fs + 8px; // 24;
 		}
 		@media @media-size-lg1{
+			font-size: @b-fs + 6px; // 22;
+		}
+		@media @media-size-xl{
 			font-size: @b-fs + 10px; // 26;
 		}
 	}
