@@ -1,3 +1,5 @@
+@isp-vine: rgb(140, 44, 97);
+@isp-blue: #3c6da9;
 .index-slider-block{
 	height: 820px;
 	@media @media-size-xs-p{height: 475px;}
@@ -34,6 +36,12 @@
 	._isp__heading-block[data-class-color="orange"] & {
 		background: @orange;
 	}
+	._isp__heading-block[data-class-color="blue"] & {
+		background: @isp-blue;
+	}
+	._isp__heading-block[data-class-color="vine"] & {
+		background: @isp-vine;
+	}
 	@media @media-size-xs{
 		font-size: @b-fs + 4px; //20px;
 		line-height: @b-lh + 4px; //28px;
@@ -56,6 +64,12 @@
 	}
 	._isp__heading-block[data-class-color="orange"] & span{
 		background: @orange;
+	}
+	._isp__heading-block[data-class-color="blue"] & span{
+		background: @isp-blue;
+	}
+	._isp__heading-block[data-class-color="vine"] & span{
+		background: @isp-vine;
 	}
 	span{
 		display: inline-block;
