@@ -47,6 +47,8 @@
 		line-height: @b-lh + 4px; //28px;
 		background: @red!important;
 	}
+	@media @media-size-mdl{margin-left: 30px;}
+	@media @media-size-xl{margin-left: 60px;}
 }
 ._isp__heading{	
 	font-family: @museo-black;
@@ -83,7 +85,48 @@
 		margin: 15px 0;
 		span{background: none!important}
 	}
+	@media @media-size-mdl{margin-left: 30px;}
+	@media @media-size-xl{margin-left: 60px;}
 }
 ._isb__carousel{
 	.item{background-size: cover;}	
+	.carousel-control{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		z-index: 5;
+		&, &:hover, &:focus{text-decoration: none;}
+		@media @media-size-xs{display: none;}
+		@media @media-size-sm{top: 20%;}
+		&::before{
+			font-family: @icon;
+			display: block;
+			color: @white;
+			font-size: 40px;
+			width: 60px;
+			text-align: center;
+			line-height: 60px;
+			transition: @transition-site;
+			border-radius: 50%;
+		}
+		&:hover{
+			&::before{
+				background: @yellow-light;
+			}
+		}
+		&.left{
+			left: 20px;
+			@media @media-size-mdl{left: 10px;}
+			&::before{
+				content: @icon-prev;
+			}
+		}
+		&.right{
+			right: 20px;
+			&::before{
+				content: @icon-next;
+			}
+		}
+	}
 }
