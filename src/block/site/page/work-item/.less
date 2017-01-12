@@ -13,9 +13,11 @@
 	align-items: center;
 	@media @media-size-xs{margin-bottom: 50px;}
 	&:nth-child(2n+2){
-		._wipc__note{			
-			padding-left: 95px;
-			padding-right: 95px;
+		._wipc__note{	
+			@media @media-notsmart{		
+				padding-left: 95px;
+				padding-right: 95px;
+			}
 			@media @media-size-sm{
 				padding-left: 40px;
 				padding-right: 40px;
@@ -62,6 +64,14 @@
 			@media @media-size-sm{
 				bottom: -25px;
 			}
+		}
+	}
+	&._center{
+		width: 100%;
+		._wipc__owl-item{
+			height: 600px;
+			@media @media-size-xs{height: 350px;}
+			@media @media-size-sm{height: 430px;}
 		}
 	}
 }
