@@ -16,7 +16,15 @@ $('.text-block img').parent().addClass('_tb__img');
 $('.fancybox').fancybox({
 	prevEffect : 'none',
 	nextEffect : 'none',
+	beforeShow : function () {
+		/* Disable right click */
+		$.fancybox.wrap.bind('contextmenu', function (e) {
+			return false; 
+		});
+	},
+	mouseWheel : false,
 });
+
 // конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
 $('.fancybox-buttons').fancybox({
 	openEffect  : 'none',
@@ -34,7 +42,14 @@ $('.fancybox-buttons').fancybox({
 	},*/
 	afterLoad : function() {
 		this.title = this.title;
-	}
+	},
+	beforeShow : function () {
+		/* Disable right click */
+		$.fancybox.wrap.bind('contextmenu', function (e) {
+			return false; 
+		});
+	},
+	mouseWheel : false,
 });
 $("form.form-site").validationEngine(
 	'attach', {
