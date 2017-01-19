@@ -8,7 +8,10 @@
 }
 .work-item__heading{
 	font-family: @museo-bold;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+    @media @media-screen{
+		line-height: @b-lh + 4px; //28px;
+	}
 }
 .work-item__note{
 	color: darken(@white, 25.5%); //#bebebe
