@@ -10,8 +10,11 @@
 					<div class="cols contacts-item__cols">
 						<div><a href="mailto:{{contacts.email}}"  class="contacts-item icon-mailto">{{contacts.email}}</a></div>
 					</div>
-					<div class="cols contacts-item__cols">
-						<div><a href="tel:{{contacts.phone_tel}}" class="contacts-item icon-tel">{{contacts.phone}}</a></div>
+					<div class="cols contacts-item__cols full">
+						<div class="contacts-item icon-tel">
+							<a href="tel:{{contacts.phone_tel}}" >{{contacts.phone}}</a>,
+							<a href="tel:{{contacts.phone_tel}}" >{{contacts.phone}}</a>
+						</div>
 					</div> 
 					<div class="cols contacts-item__cols full">
 						<div class="contacts-item icon-location" data-toggle="modal" data-target="#modal-map">{{contacts.address}}</div>

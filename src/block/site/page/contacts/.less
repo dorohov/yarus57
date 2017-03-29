@@ -56,7 +56,7 @@
 .contacts-block{
 	&.line1{
 		padding-top: 105px;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 		border-bottom: 1px solid @yellow-light;
 		margin-bottom: 40px;
 		@media @media-device{
@@ -76,7 +76,7 @@
 .contacts-item__cols{
 	width: 50%;
 	margin-bottom: 20px;
-	&.full{width: 100%; margin-bottom: 0}
+	&.full{width: 100%;}
 	@media @media-size-xs{width: 100%;}
 }
 a,div{ 
@@ -118,6 +118,14 @@ a,div{
 			transform: translateY(-50%);
 			transition: @transition-site; 
 			font-size: 20px;
+		}
+		a{
+			transition: @transition-site; 
+			color: lighten(@black, 28.2%);
+			display: inline-block;
+			&:hover{
+				color: @blue-grey;
+			}
 		}
 		&:hover{
 			color: @blue-grey;
