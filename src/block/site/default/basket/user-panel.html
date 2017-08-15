@@ -1,0 +1,37 @@
+<form action="#" class="{{basket_prefix}}panel">
+	<div class="{{basket_prefix}}tab-pen fade in active" id="user-tab">
+		[[azbntple 
+			tpl="/src/block/site/default/form/user.html" 
+			form_prefix="form__"
+			form_id="autoriz"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Личные данные" 
+		]]			
+	</div>
+	<div class="{{basket_prefix}}tab-pen fade" id="delivery-tab">
+		[[azbntple 
+			tpl="/src/block/site/default/form/delivery.html" 
+			form_prefix="form__"
+			form_id="user"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Параметры доставки" 
+		]]					
+	</div>
+	<div class="{{basket_prefix}}tab-pen fade" id="password-tab">
+		[[azbntple 
+			tpl="/src/block/site/default/form/password-new.html" 
+			form_prefix="form__"
+			form_id="user"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Изменение пароля" 
+		]]	
+	</div>
+
+	<div class="{{basket_prefix}}btn">
+		<button type="submit" class="btn__item  is--form">Сохранить
+		</button>
+	</div>
+</form>

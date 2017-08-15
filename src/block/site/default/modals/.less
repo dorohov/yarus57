@@ -9,7 +9,7 @@
 
 // Kill the scroll on the body
 .modal-open {
-	overflow: hidden; 
+	//overflow: hidden; 
 }
 .modal {
 	display: none;
@@ -22,30 +22,17 @@
 	z-index: @zindex-modal;
 	-webkit-overflow-scrolling: touch;
 	outline: 0;
-	&.fade .modal-dialog {
-		.translate(0, 0%);
-		.transition-transform(~"0.5s");
-	}
-	&.in .modal-dialog { .translate(0, 10%) }
 	@media @media-size-xs{
-		&.fade .modal-dialog {.translate(-100%, 0);}
-		&.in .modal-dialog { .translate(0, 0%) }
-		&.fade ._msm__dialog {.translate(-100%, 0%)}
-		&.in ._msm__dialog {.translate(0, 0%)}
+		&.fade .modal-dialog {left: -100%;}
+		&.in .modal-dialog {left: 0;}
 	}
-	@media @media-size-lg {
-		&.in .modal-dialog { .translate(0, 4%) }
+	@media @media-notsmart{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 5%;}
 	}
-	@media @media-size-xxl{
-		&.in .modal-dialog { .translate(0, 30%) }
-	}
-	@media @media-size-sm{		
-		&.fade ._msm__dialog {.translate(100%, 0%)}
-		&.in ._msm__dialog {.translate(0, 0%)}
-	}
-	@media @media-screen{		
-		&.fade ._msm__dialog {.translate(0, 100%)}
-		&.in ._msm__dialog {.translate(0, 0%)}
+	@media @media-size-mdl{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 0%;}
 	}
 }
 .modal-open .modal {
@@ -68,64 +55,56 @@
 
 }
 .modal-dialog {
+	transition: all 0.5s;
 	position: relative;
 	@media @media-size-xs 	{width: auto;	margin: 0px;}  
 	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
-	@media @media-screen 	{width: 620px;	margin: 0px auto;}  
-	//background: url(../img/maket/form.jpg) no-repeat 0 -265px;
-}
-.modal-content {
-	position: relative;
-	outline: 0;
+	@media @media-screen 	{width: 665px;	margin: 0px auto;} 
+	 
 }
 .modal-body {
 	position: relative;
-	padding: 40px 30px 30px;
 	background: @white;
-	color: @black;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	align-items: center;
-	//opacity: 0.7;
-	font-size: @b-fs - 3px; //15px;
-	line-height: @b-lh - 6px; //22px;
-	@media @media-size-xs{padding: 25px;}	
-	@media @media-size-sml{padding: 30px;}
+	//color: @black;	
+	@media @media-size-xs{padding: 35px 50px;}	
+	@media @media-size-sm{padding: 70px 60px;}
+	@media @media-screen{padding: 3.5vw 6.8vw 3vw;}
 }
-
+.modal-content{}
 // Title text within header
-.modal-heading{}
-.modal-title {
-	//font-family: @open-sbold;
-	font-family: @museo-sans-bold;
-	margin-bottom: 0;
-	@media @media-size-xs {text-align: center}
-	@media @media-device	{font-size: @b-fs + 8px; line-height: @b-lh + 10px; } 	// 24/30
-	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 22px;} 	// 36/42
-}
-.modal-btn-close{
+.modal-title {}
+.modal-close{
     position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 5;
-    //transform: translateY(-50%);
-	@media @media-size-xs-p{
+    z-index: 5; 
+    border: 2px solid @blue; 
+   	color: @blue;
+   	border-radius: 50%;
+	@media @media-device{
 		top: 20px;
-		right: 50%; 
-		transform: translateX(50%);
+		right: 20px; 
+		width: 42px;
+		height: 42px;
+		padding: 10px;
 	}
-	@media @media-size-xs-l{
-		top: 20px;
-		right: 20px;
+	@media @media-size-xs{
+		top: 5px;
+		right: 5px;
 	}
-}
-.modal-block{
-    @media @media-size-xs-p {padding-top: 50px;}
+	@media @media-screen{
+		top: 1.4vw;
+		right: 2vw;    	 
+		width: 32px;
+		height: 32px; 
+		padding: 7px;
+	}	
+	svg{display: block;}
+	&:hover{
+		background-color: @blue;
+		color: @white;
+	}
 }
 .modal-note{
-	text-align: center; 
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
@@ -137,61 +116,39 @@
 }
 
 //custom styles
-#modal-map{padding-left: 0!important}
-.map-google-block{
-	width: 100%;
-	height: 100%;
-	min-height: 100%;
-	height: 500px;
+.modal-base{
 }
-._msm__dialog{
-	width: 100%;
-	height: 100%;
-	margin: 0;
-}
-._msc__content{
-	width: 100%;
-	height: 100%;
-	
-}
-._msm__body{
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	.modal-btn-close{
-	    top: 10px;
-	    right: 10px;
-		@media @media-size-xs{
-			top: 20px;
-			right: 30px;
-		}
+.modal-base__{
+	/*&modal{
+		display: block;
+		opacity: 1;
+		background: @black
+	}*/
+	/*&dialog {
+		background: url('/img/maket/index.jpg') no-repeat center -4792px;	
+		height: 100%;
+		overflow: auto;
+	}*/
+	&body {
+		//opacity: 0.7;
+		//background-color: @blue-light;
+		//overflow: hidden;
 	}
-}
-._msm__block{
-	width: 100%;
-	height: 100%;
-	padding: 0;
-}
-
-._msr__body{
-	padding: 40px 50px 30px;
-    @media @media-size-xs-p{
-	    padding: 70px 30px 10px;
-    }
-    @media @media-size-xs-l{
-		padding: 40px 50px 10px;
-    }
-    @media @media-notsmart{
-		border-radius: 10px;
-   		border: 2px solid @yellow-light;
-    }
-}
-._msr__block{
-	width: 100%;
-	height: 100%;
-	padding: 0;
-}
-._msr__title{
-	margin-bottom: 20px;
-	font-family: @museo-bold;
+	/*&bg{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media @media-screen {
+			position: absolute;
+			z-index: 1;
+			top: 20px;
+			left: -5px;
+			max-width: 440px;
+			max-height: 550px;
+			width: 24vw;
+			height: 30vw;
+		}
+		
+	}
+	&content{position: relative; z-index: 2}*/
 }

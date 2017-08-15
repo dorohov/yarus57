@@ -1,0 +1,20 @@
+<div class="panel {{basket_prefix}}panel">
+	<a data-toggle="collapse" data-parent="#{{basket_parent}}" href="#{{basket_id}}" class="{{basket_prefix}}heading-block"  aria-expanded="{{basket_expanded}}">
+		<div class="row {{basket_prefix}}row">
+			<div class="cols {{basket_prefix}}cols  is--left">
+				<div class="{{basket_prefix}}heading"><span class="{{basket_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="owl-bottom" ]]</span>
+				Заказ № {{basket_num}} от {{basket_date}}г.</div>
+				
+			</div>
+			<div class="cols {{basket_prefix}}cols  is--right">
+				<div class="{{basket_prefix}}cost">На сумму: <span>{{basket_cost}}</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</div>
+			</div>
+		</div>
+	</a>
+	<div id="{{basket_id}}" class="panel-collapse collapse {{basket_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/catalog/block-table-order.html" 
+			catalog_prefix="catalog-table__"
+		]]	
+	</div>
+</div>

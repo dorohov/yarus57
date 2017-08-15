@@ -1,0 +1,26 @@
+<form action="#" class="{{basket_prefix}}panel  is--confirm">
+	<div class="{{basket_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/basket/order-confirm-catalog.html" 
+			basket_prefix="basket-order-confirm__"
+			catalog_prefix="catalog-table__"   
+		]]
+	</div>
+	<div class="{{basket_prefix}}item  is--order-confirm">
+		[[azbntple 
+			tpl="/src/block/site/default/basket/order-confirm-user.html" 
+			basket_prefix="basket-order-confirm__"
+			catalog_prefix="catalog-table__"   
+		]]
+	</div>
+	<div class="{{basket_prefix}}item  is--order-confirm">
+		[[azbntple 
+			tpl="/src/block/site/default/basket/order-confirm-delivery.html" 
+			basket_prefix="basket-order-confirm__"
+			catalog_prefix="catalog-table__"   
+		]]
+	</div>
+	<div class="{{basket_prefix}}btn  is--order-confirm">
+		<button type="submit" class="btn__item  is--form">Заказать</button> 
+	</div>
+</form>

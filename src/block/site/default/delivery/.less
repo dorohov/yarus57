@@ -1,0 +1,64 @@
+.deliver-panel__{
+	/*&block{
+		@media @media-device {
+			padding-top: @panel-gutter-device;
+			padding-bottom: @panel-gutter-device;
+		}
+		@media @media-screen {
+			padding-top: @panel-gutter-screen;
+			padding-bottom: @panel-gutter-screen;
+		}
+	}*/
+	&cols{
+		&.is--cols-4{
+			@media @media-size-xs-l {
+				.makeCols(4, 12);
+			}
+		}
+	}
+	&item{
+		position: relative;
+		@media @media-screen {
+			padding-left: 7vw;    
+			margin-top: 15px;
+		}
+	}
+	&icon{
+		width: 110px;
+		height: 110px;
+		margin: 0 auto 15px;
+		@media @media-size-xs-p {
+			margin: 0 0 15px;
+		}
+		@media @media-screen {	
+			position: absolute;
+			top: 0;
+			left: 0;		
+		    max-width: 110px;
+			max-height: 110px;
+		    width: 5.95vw;
+			height: 5.95vw;
+		}
+	}
+	&heading{
+		color: @b-color-a;
+		font-weight: 700;
+		position: relative;
+		z-index: 3;
+		.calcFontSize(20, 22, 320, 1680);
+		.calcLineHeight(22, 24, 320, 1680);
+		letter-spacing: 0.5px;
+		margin-bottom: 15px
+	}
+	&note{
+		line-height: @b-lh - 4;
+		@media @media-device {
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 6;
+		}
+		@media @media-size-xxl {
+			//max-width: 330px;
+		}
+		p, div, ol, ul, li{margin-bottom: 0}
+	}
+}

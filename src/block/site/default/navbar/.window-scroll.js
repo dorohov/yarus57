@@ -1,16 +1,16 @@
 var topPos = $(document).scrollTop();		
-var snb = $('.navbar-site.index');
-if(snb.hasClass('scroll-sidebar')) {
-	if(topPos < 500) {
-		snb.removeClass('scroll-sidebar');
+var snb = $('.navbar-site.scroll');
+if(snb.hasClass('scroll-navbar')) {
+	if(topPos <= 500) {
+		snb.removeClass('scroll-navbar');
 	} 
 } else {
 	if(topPos > 500) {
-		snb.addClass('scroll-sidebar');
+		snb.addClass('scroll-navbar');
 	}
 }	
 if(snb.hasClass('opacity')) {
-	if(topPos < 200) {
+	if(topPos <= 200) {
 		snb.removeClass('opacity');
 	}
 } else {
@@ -19,11 +19,11 @@ if(snb.hasClass('opacity')) {
 	}
 }	
 if(snb.hasClass('fixed')) {
-	if(topPos < 400) {
+	if(topPos <= 400) {
 		snb.removeClass('fixed');
 	}
 } else {
 	if(topPos > 400) {
-		snb.addClass('fixed');
+		snb.addClass('fixed'); 
 	}
-}
+} 

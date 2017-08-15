@@ -1,47 +1,15 @@
-<div class="{{class}}">
-	<div class="row _cpc__row">
-		<div class="cols _cpc__left-cols">
-			<h1 class="heading-site _cpc__heading-site "><span>Cвяжитесь</span> с нами любым удобным для вас способом</h1>
-			<button type="button" class="btn-site btn-map" data-toggle="modal" data-target="#modal-map"></button>
-		</div>
-		<div class="cols _cpc__right-cols">
-			<div class="contacts-block line1">
-				<div class="row contacts-block__row">
-					<div class="cols contacts-item__cols">
-						<div><a href="mailto:{{contacts.email}}"  class="contacts-item icon-mailto">{{contacts.email}}</a></div>
-					</div>
-					<div class="cols contacts-item__cols full">
-						<div class="contacts-item icon-tel">
-							<a href="tel:{{contacts.phone_tel}}" >{{contacts.phone}}</a>,
-							<a href="tel:{{contacts.phone_tel}}" >{{contacts.phone}}</a>
-						</div>
-					</div> 
-					<div class="cols contacts-item__cols full">
-						<div class="contacts-item icon-location" data-toggle="modal" data-target="#modal-map">{{contacts.address}}</div>
-					</div> 
-				</div>
-			</div>
-			<div class="contacts-block"> 
-				<div class="row contacts-block__row">
-					<div class="cols contacts-item__cols">
-						<div><a href="{{soc.vk}}" target="_blank"  class="contacts-item icon-vk">{{soc.vk_name}}</a></div>
-					</div>
-					<div class="cols contacts-item__cols">
-						<div><a href="{{soc.fb}}" target="_blank"  class="contacts-item icon-fb">{{soc.fb_name}}</a></div>
-					</div>
-					<div class="cols contacts-item__cols">
-						<div><a href="{{soc.tw}}" target="_blank"  class="contacts-item icon-tw">{{soc.tw_name}}</a></div>
-					</div>
-					<div class="cols contacts-item__cols">
-						<div><a href="{{soc.inst}}" target="_blank"  class="contacts-item icon-inst">{{soc.inst_name}}</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="_cpc__btn">
-				<button type="button" class="btn-site btn-yellow-light btn-mail" data-toggle="modal" data-target="#modal-reviews">Напишите нам</button>
-			</div><!-- 
-			
-					<div id="map-google" class="map-google-block"></div> -->
-		</div>
+<div class="content-block {{page_prefix}}block" role="main">
+	<div class="container content-block__container">		
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--heading  is--center"
+			header_level="h1"
+			header="Контакты"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/contacts/item.html" 
+			contacts_prefix="contacts-panel__"
+		]]
 	</div>
 </div>

@@ -1,0 +1,24 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--email">
+				<div class="{{form_prefix}}item">
+					<input type="email" class="{{form_prefix}}control form-control validate[required,custom[email]]  {{form_color}}" id="{{form_id}}[email]" name="{{form_id}}[email]" autofocus placeholder="Ваш E-mail">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}">
+				<div class="{{form_prefix}}item">
+					<input type="password" class="{{form_prefix}}control form-control validate[required,minSize[6]]]  {{form_color}}" id="f[password]" name="f[Пароль]" placeholder="Ваш пароль"  data-input="password">
+					<button type="button" class="{{form_prefix}}btn-view" data-btn="view-pass" title="Показать пароль">
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="password-hidden" ]]
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="password-visible" ]]
+					</button>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				<button type="submit" class="btn__item  is--form  is--yellow">{{form_btn_name}}
+				</button>
+			</div>
+		</div>	
+	</div> 
+</form> 

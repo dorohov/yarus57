@@ -1,0 +1,38 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--email">
+				<div class="{{form_prefix}}item">
+					<input type="email" class="{{form_prefix}}control form-control validate[required,custom[email]]  {{form_color}}" id="{{form_id}}[email]" name="{{form_id}}[email]" autofocus placeholder="Ваш E-mail">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}">
+				<div class="{{form_prefix}}item">
+					<input type="password" class="{{form_prefix}}control form-control validate[required,minSize[6]]]  {{form_color}}" id="f[password]" name="f[Пароль]" placeholder="Ваш пароль"  data-input="password">
+					<button type="button" class="{{form_prefix}}btn-view" data-btn="view-pass" title="Показать пароль">
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="password-hidden" ]]
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="password-visible" ]]
+					</button>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}">
+				<div class="{{form_prefix}}item">
+					<input type="password" class="{{form_prefix}}control form-control validate[required,equals[password]]  {{form_color}}" id="f[passwordReply]" name="f[Подтвердите Пароль]" placeholder="Подтвердите пароль">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
+				<div class="rect-switch {{form_prefix}}item">
+	                <input class="rect-switch__input validate[required]" id="f[processing]" name="f[processing]" type="checkbox" checked />
+	                <label for="f[processing]" class="rect-switch__label"></label> 
+					<label for="f[processing]" class="rect-switch__text"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				<button type="submit" class="btn__item  is--form  is--yellow">{{form_btn_name}}
+				</button>
+			</div>
+		</div>	
+	</div> 
+</form> 

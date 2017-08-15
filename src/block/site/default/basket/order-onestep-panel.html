@@ -1,0 +1,40 @@
+<form action="#" class="{{basket_prefix}}panel  is--order-onestep">
+	<div class="{{basket_prefix}}item">		
+		[[azbntple 
+			tpl="/src/block/site/default/catalog/block-table-order-onestep.html" 
+			catalog_prefix="catalog-table__"  
+		]]
+	</div>
+	<div class="{{basket_prefix}}item  is--order-onestep">
+		[[azbntple 
+			tpl="/src/block/site/default/form/user.html" 
+			form_prefix="form__"
+			form_id="autoriz"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Личные данные" 
+		]]	
+	</div>
+	<div class="{{basket_prefix}}item  is--order-onestep">
+		[[azbntple 
+			tpl="/src/block/site/default/form/delivery.html" 
+			form_prefix="form__"
+			form_id="user"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Параметры доставки" 
+		]]		
+	</div>
+	<div class="{{basket_prefix}}item  is--order-onestep">	
+		<div class="rect-switch form__item">
+            <input class="rect-switch__input validate[required]" id="{{form_id}}[processing]" name="{{form_id}}[processing]" type="checkbox" checked />
+            <label for="{{form_id}}[processing]" class="rect-switch__label"></label> 
+			<label for="{{form_id}}[processing]" class="rect-switch__text"> 
+				Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+			</label>
+        </div>	
+	</div>
+	<div class="{{basket_prefix}}btn  is--order-confirm">
+		<button type="submit" class="btn__item  is--form">Заказать</button> 
+	</div>
+</form>

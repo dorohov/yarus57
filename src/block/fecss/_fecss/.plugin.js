@@ -25,7 +25,32 @@ function fecss_ScreenJS() {
 			'portrait' : [],
 			'landscape' : [],
 		},
+		'md-h' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
 		'lg' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
+		'xl' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
+		'device' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
+		'pc' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
+		'xxl' : {
 			'default' : [],
 			'portrait' : [],
 			'landscape' : [],
@@ -37,15 +62,31 @@ function fecss_ScreenJS() {
 	};
 	
 	ctrl.isSM = function() {
-		return (ctrl.screen.w < 992 && ctrl.screen.w > 767);
+		return (ctrl.screen.w > 767 && ctrl.screen.w < 1025);
 	};
 	
 	ctrl.isMD = function() {
-		return (ctrl.screen.w < 1200 && ctrl.screen.w > 991);
+		return (ctrl.screen.w > 1024 && ctrl.screen.w < 1200);
+	};
+
+	ctrl.isMDH = function() {
+		return (ctrl.screen.w > 1024 && ctrl.screen.w < 1281  && ctrl.screen.h > 909);
 	};
 	
 	ctrl.isLG = function() {
-		return (ctrl.screen.w > 1199);
+		return (ctrl.screen.w > 1199  && ctrl.screen.w < 1400);
+	};
+	ctrl.isXL = function() {
+		return (ctrl.screen.w > 1399  && ctrl.screen.w < 1681);
+	};
+	ctrl.isXXL = function() {
+		return (ctrl.screen.w > 1680);
+	};
+	ctrl.device = function() {
+		return (ctrl.screen.w < 1010);
+	};
+	ctrl.pc = function() {
+		return (ctrl.screen.w > 1024);
 	};
 	
 	ctrl.screenIs = function() {
@@ -59,8 +100,23 @@ function fecss_ScreenJS() {
 		if(ctrl.isMD()) {
 			result = 'md';
 		} else
+		if(ctrl.isMDH()) {
+			result = 'md-h';
+		} else
 		if(ctrl.isLG()) {
 			result = 'lg';
+		}else
+		if(ctrl.isXL()) {
+			result = 'xl';
+		}else
+		if(ctrl.isXXL()) {
+			result = 'xxl';
+		}else
+		if(ctrl.device()) {
+			result = 'device';
+		}else
+		if(ctrl.pc()) {
+			result = 'pc';
 		}
 		return result;
 	};
@@ -144,6 +200,7 @@ $(window).on('resize', function(){
 screenJS.is(xs/sm/md/lg/portrait/landscape) - да/нет
 
 screenJS.isXS() - да/нет
+screenJS.device() - да/нет
 screenJS.isSM() - да/нет
 screenJS.isMD() - да/нет
 screenJS.isLG() - да/нет

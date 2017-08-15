@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>
-		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
 	</head>
-	<body>	
- 
-		[[azbntple tpl="8/src/block/fecss/_page-loader/.html" class="_czr__loader active" ]] 
-
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]]  
-		
-		<div class="container">
-			[[azbntple tpl="/src/block/site/page/404/.html" class="content-block error-page-content" ]]
-		</div>
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]]		
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/404/.html"
+			page_prefix="error-page__"      
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
 	</body>
-</html> 
+</html>

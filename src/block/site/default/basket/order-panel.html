@@ -1,0 +1,36 @@
+<form action="#" class="{{basket_prefix}}panel">
+
+	<div class="{{basket_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/form/user.html" 
+			form_prefix="form__"
+			form_id="autoriz"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Личные данные" 
+		]]	
+	</div>
+	<div class="{{basket_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/form/delivery.html" 
+			form_prefix="form__"
+			form_id="user"
+			form_mod="  " 
+			form_color="  " 
+			form_heading="Параметры доставки" 
+		]]		
+	</div>
+	<div class="{{basket_prefix}}item">			
+		<div class="rect-switch form__item">
+            <input class="rect-switch__input validate[required]" id="{{form_id}}[processing]" name="{{form_id}}[processing]" type="checkbox" checked />
+            <label for="{{form_id}}[processing]" class="rect-switch__label"></label> 
+			<label for="{{form_id}}[processing]" class="rect-switch__text"> 
+				Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+			</label>
+        </div>	
+	</div>
+	<div class="{{basket_prefix}}btn">
+		<!-- <button type="submit" class="btn__item  is--form">Продолжить</button> -->
+		<a href="/order-confirm.html" class="btn__item  is--form">Продолжить</a>
+	</div>
+</form>

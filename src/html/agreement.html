@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>
-		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
-	</head>
-	<body>	
- 
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]]  		
-		
 		[[azbntple 
-			tpl="/src/block/site//page/agreement/.html" 
-			class="content-block agreement-page-content"
-			heading_page="Соглашение на обработку персональных данных сайтом yarus57.ru"  
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+		]] 	
+		[[azbntple 
+			tpl="/src/block/site/page/agreement/.html" 
+			class="agreement-page"
+			prefix_block="_agp__"     
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
 		]]
-		<div class="container">
-			[[azbntple tpl="/src/block/site/default/form/panel.html" class="form-block" ]]	
-		</div>
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]]	
-			
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
 	</body>
-</html> 
+</html>

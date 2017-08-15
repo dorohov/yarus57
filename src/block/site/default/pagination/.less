@@ -1,85 +1,34 @@
-.pagination-site{
-	list-style: none;
-	margin: 0;
-	padding: 0;	
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
-	flex-wrap: wrap;
-	> li{
-		padding: 0 5px 10px;	
-		@media @media-size-xs{display: none;}	
-		> a{
-			color: lighten(@black, 50%);
-			transition: @transition-site;
-			border: 1px solid @yellow-light;
-			display: block;
-			font-size: 20px;
-			font-family: @museo-sans-light;
-			line-height: 40px;
-			width: 40px;
-			text-align: center;
-			border-radius: 3px;
-			&:hover{
-				color: @black;
-				background: fadeout(@yellow-light, 80%);
-			}
+.pagination-panel__{
+	&block{
+		@media @media-device {padding-top: 35px;}
+		@media @media-screen {padding-top: 3.2vw;}
+	}
+	&list{
+		list-style: none;
+		margin-left: -10px;
+		margin-right: -10px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	&item{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&link{
+		display: block;
+		font-weight: 500;
+		color: @b-color;
+		.pagination-panel__item.is--active &{
+			color: @blue;
+			cursor: default;
 		}
-		&.active{
-			> a{
-				background: @yellow-light;
-				color: @white;
-				cursor: default;		
-			}
-		}
-		&._first{
-			> a{
-				&:before{
-					font-family: @icon;
-					content: @icon-prev;
-				}
-			}
-			@media @media-size-xs{
-				display: block;
-				width: 50%;
-				> a{
-					display: block;
-					//width: 100%;
-					margin-left: auto;
-					&:before,
-					&:after{
-						line-height: 20px;
-						display: inline-block;
-						vertical-align: middle;
-					}
-					&:before{font-size: 20px;}
-					//&:after{font-size: 12px; content: 'Предыдущая страница';} 
-				}
-			}
-		}
-		&._last{
-			> a{
-				&:after{
-					font-family: @icon;
-					content: @icon-next;
-				}				
-			}
-			@media @media-size-xs{
-				display: block;
-				width: 50%;
-				> a{
-					display: block;
-					//width: 100%;
-					&:before,
-					&:after{
-						line-height: 20px;
-						display: inline-block;
-						vertical-align: middle;
-					}
-					&:after{font-size: 20px;}
-					//&:before{font-size: 12px; content: 'Следущая страница';}
-				}
-			}	
+		.calcFontSize(20, 28, 320, 1680);
+		.calcLineHeight(22, 30, 320, 1680);
+		svg{
+			width: 16px;
+			height: 16px;
 		}
 	}
 }

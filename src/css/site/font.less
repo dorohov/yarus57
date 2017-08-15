@@ -1,8 +1,13 @@
-.include-custom-font(@family: @minion, @weight: normal, @style: normal){
+.include-custom-font(
+	@family: @roboto, 
+	@src-name: @roboto, 
+	@weight: normal, 
+	@style: normal
+	){
 	@font-face{			
 		font-family: "@{family}";			
-		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
-				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
 		font-weight: @weight;
 		font-style: @style;		
 	}
@@ -16,20 +21,33 @@
 	}
 }
 
-//.include-custom-font(@family: @minion, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-light, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-bold, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-black, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-sans-light, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-sans, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-sans-bold, 		@weight: normal, @style: normal);
-//.include-custom-font(@family: @museo-sans-bold-ital, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @museo-sans-black, 		@weight: normal, @style: normal);
-//.include-custom-font(@family: @open, 		@weight: normal, @style: normal);
-//.include-custom-font(@family: @open-sbold, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @beau-light, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @beau, 		@weight: normal, @style: normal);
-.include-custom-font(@family: @beau-sbold, 		@weight: normal, @style: normal);
-
-.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
+.include-custom-font(
+	@family: @agava,
+	@src-name: @agava,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @agava,
+	@src-name: @agava-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto-ital,
+	@weight: 400, 
+	@style: italic
+	);

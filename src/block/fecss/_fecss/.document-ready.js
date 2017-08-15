@@ -17,7 +17,7 @@ $(function(){
 	if (userAgent.indexOf('yabrowser') != -1) res = 'yabrowser';
 	
 	$('html').eq(0).addClass(res);
-});
+}); 
 
 $(function(){
 	$(document.body).on('keydown', function(event){

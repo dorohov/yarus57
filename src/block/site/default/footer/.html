@@ -1,27 +1,33 @@
-<footer class="{{class}}">	
-	<div class="container">
-		<div class="row _fs__row">
-			<div class="cols _fs__copyright-cols">
-				<div>&copy; 2016. Все права защищены.</div>
-				<div class="_fs__copyright__logo"><a href="/"><img src="/img/default/logotip-white.png" data-rjs="2" alt="" ></a></div>
+<footer class="{{footer_prefix}}block">	
+	<div class="container {{footer_prefix}}container">
+		<div class="row {{footer_prefix}}row">
+			
+			<div class="cols {{footer_prefix}}cols  is--copyright">
+				<div class="row {{footer_prefix}}copyright-row">
+					<div class="cols {{footer_prefix}}copyright-cols  is--copyright">
+						<a href="/" class="{{footer_prefix}}logotip">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a> 
+					</div>
+					<div class="cols {{footer_prefix}}copyright-cols  is--text">
+						<div class="{{footer_prefix}}copyright"><span>&copy;</span> {{contacts.copyright}}</div>
+						<div class="{{footer_prefix}}requisites">ТД Океан 2013 - 2017</div>
+					</div>
+				</div>				
 			</div>
-			<div class="cols _fs__soc">
-				<div>Мы в соц.сетях:</div>
-				<div class="soc-site">
-					<a href="{{soc.vk}}" target="_blank" class="soc-site-item rect icon-vk"></a>
-					<a href="{{soc.fb}}" target="_blank" class="soc-site-item rect icon-fb"></a>
-					<a href="{{soc.tw}}" target="_blank" class="soc-site-item rect icon-tw"></a>
-					<a href="{{soc.inst}}" target="_blank" class="soc-site-item rect icon-inst"></a>
-				</div>
+			<div class="cols {{footer_prefix}}cols  is--contacts">
+				[[azbntple tpl="/src/block/site/default/social/email-tel.html" social_prefix="social__"]] 
 			</div>
-			<div class="cols _fs__dorohovdesign-cols">
-				<div>Разработка сайта</div>				
-				<div class="_fs__dorohovdesign__logo">
-					<a href="http://www.dorohovdesign.ru/" target="_blank">
-						<img src="/img/default/dorohovdesign-white.png" data-rjs="2" alt="">
-					</a>
-				</div>		 
-			</div>		
+			<div class="cols {{footer_prefix}}cols  is--dorohovdesign">
+				<div class="row {{footer_prefix}}dorohovdesign-row"> 
+					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--text">
+						<div class="{{footer_prefix}}dorohovdesign-text">Создание сайта</div>
+					</div>
+					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--logotip">
+						<a href="http://dorohovdesign.ru/" target="_blank" class="{{footer_prefix}}dorohovdesign-logotip">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="dorohovdesign" ]]
+						</a>
+					</div>
+				</div>				 
+			</div>	
 		</div>
 	</div>
 </footer>

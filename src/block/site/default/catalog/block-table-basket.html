@@ -1,0 +1,50 @@
+<div class="{{catalog_prefix}}block">
+	<div class="table-responsive {{catalog_prefix}}table-responsive">
+		<table class="table {{catalog_prefix}}table  is--basket">
+			<thead>
+				<tr>
+					<th>Наименование&nbsp;продукта</th>
+					<th>Количество,&nbsp;<span>шт</span></th>
+					<th>Вес,&nbsp;<span>кг</span></th>
+					<th>Стоимость</th>
+					<th>Убрать</th>
+				</tr>
+			</thead>
+			<tbody>
+				[[azbntple 
+					tpl="/src/block/site/default/catalog/item-table-basket.html" 
+					catalog_prefix="catalog-table__"
+					catalog_link="/catalog-item.html"
+					catalog_heading="Лосось (Семга)"
+					catalog_weight="5-6 кг/шт "
+					catalog_weight_all="25,3"
+					catalog_cost="3300"
+				]] 
+				[[azbntple 
+					tpl="/src/block/site/default/catalog/item-table-basket.html" 
+					catalog_prefix="catalog-table__"
+					catalog_link="/catalog-item.html"
+					catalog_heading="Дорадо"
+					catalog_weight="5-6 кг/шт "
+					catalog_weight_all="25,3"
+					catalog_cost="3300"
+				]] 
+			</tbody>
+		</table>
+	</div>
+	<div class="row {{catalog_prefix}}row  is--fe">
+		<div class="cols {{catalog_prefix}}cols  is--cost">
+			<div class="{{catalog_prefix}}finish-cost">ИТОГО: <span>3770</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+			</div>
+		</div>
+		<div class="cols {{catalog_prefix}}cols  is--btn">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="is--md"
+				button_link="/order.html"
+				button_name="Оформить"
+			]]
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+.filter-qty__{
+	&block{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&icon{
+		.btn-clearfix();
+		width: 30px;
+		height: 30px;
+		&, &:focus{
+			color: @b-color-a;
+		}
+		&:hover{
+			color: @b-color;
+		}
+	}
+	&qty{
+		padding: 0 10px;
+	}
+}

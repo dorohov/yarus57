@@ -1,0 +1,114 @@
+.index-page-header{
+	position: relative;
+	overflow: hidden;	
+	//background-color: @white10;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	background-color: @blue-white;
+}
+.index-header__{
+	&container{
+		position: relative;
+		z-index: 1;
+		@media @media-size-xs {
+			z-index: 3;
+			position: relative;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			min-height: 360px;
+		}
+		@media @media-size-sm {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media @media-size-sm-p {
+			min-height: 60vw;
+		}
+		@media @media-size-sm-l {
+			min-height: 52vw;
+		}
+		@media @media-size-md{
+			min-height: ~"calc(100vh - @{navbar-top-md})";			
+		}
+		@media @media-screen-lg{		
+			min-height: 100vh;
+			padding-top: @navbar-top-screen;
+		}
+		@media @media-size-lg{
+			min-height: 100vh;
+			padding-top: @navbar-top-lg;		
+		}
+		@media @media-size-xxl{	
+			padding-top: @navbar-top-screen-xxl;
+		}
+	}
+	&preview{
+		z-index: 2;
+		position: absolute;
+
+		@media @media-size-xs {
+			bottom: 0;
+			right: 0;	
+			opacity: .2;		
+		}
+		@media @media-size-xs-p {
+			width: 245px;
+			height: 220px;
+			transform: translateX(40%);
+		}
+		@media @media-size-xs-l {
+			width: 205px;
+			height: 180px;
+		}
+		@media @media-notsmart {
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);			
+		}
+		@media @media-size-sm {
+			max-width: 185px;
+			max-height: 160px;
+			width: 24.8vw;
+			height: 21vw;			
+		}
+		@media @media-screen {
+			max-width: 885px;
+			max-height: 760px;
+			width: 47.8vw;
+			height: 41vw;			
+		}
+		@media @media-size-md {
+			width: 42.8vw;
+			height: 36vw;
+		}
+	}
+	&inner{
+		@media @media-screen {
+			position: absolute;
+			top: 35%;
+			transform: translate(0%,-50%);
+			width: 100%;
+			left: 15px;
+			transition: @trs-site;
+		}
+	}
+	&heading{
+		font-family: @b-ff-2;
+		margin: 0;
+		letter-spacing: 0.5px;
+		.calcFontSize(18, 37, 320, 1680);
+		.calcLineHeight(24, 43, 320, 1680);			
+	}
+	&heading-item{
+		display: block;
+		@media @media-size-xs {	
+			br{display: none;}		
+		}
+		&.is--lg{
+			.calcFontSize(24, 82, 320, 1680);
+			.calcLineHeight(30, 70, 320, 1680);	
+			margin-bottom: 1.2vw;
+		}
+	}
+}

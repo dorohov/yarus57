@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>
-		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
 	</head>
-	<body>	
- 
-		[[azbntple tpl="8/src/block/fecss/_page-loader/.html" class="_czr__loader active" ]] 
-
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site index" ]]  
-		
-		[[azbntple tpl="/src/block/site/page/index/slider/.html" class="index-slider-block" ]]
-
-		[[azbntple tpl="/src/block/site/page/index/advantages/.html" class="index-advantages-block" ]]
-		
-		[[azbntple tpl="/src/block/site/page/index/about/.html" class="index-about-block" ]]
-
-		[[azbntple tpl="/src/block/site/page/index/work/.html" class="index-work-block" ]]
-			
-		<div class="index-form-block">		
-			<div class="container">
-				<div class="_ifb__note">
-					<div>Мы&nbsp;внимательны к&nbsp;заказчикам и&nbsp;требовательны к&nbsp;своим мастерам. У&nbsp;нас вы&nbsp;можете заказать комплексный ремонт квартир, коттеджей, коммерческих помещений, а&nbsp;так&nbsp;же отделку ванны, кухни, гостиной, коридора,других комнат по&nbsp;отдельности. Закажите бесплатный замер и&nbsp;консультацию прямо сейчас.</div>
-				</div>
-				[[azbntple tpl="/src/block/site/default/form/panel.html" class="form-block" ]]	
-			</div>
-		</div>
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]]	
-
-			
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-
+	<body class="is--index-page"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/page/index/header/.html"
+			class="index-page-header"
+			prefix_block="index-header__"    
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/page/index/.html"
+			class="index-page"
+			prefix_block="_ip__"    
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]] 
+		[[azbntple tpl="/src/block/site/default/script/validationEngine.html" ]] 
 	</body>
-</html> 
+</html>
