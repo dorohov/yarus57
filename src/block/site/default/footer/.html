@@ -2,16 +2,15 @@
 	<div class="container {{footer_prefix}}container">
 		<div class="row {{footer_prefix}}row">
 			
+			<div class="cols {{footer_prefix}}cols  is--logotip">
+				<a href="/" class="{{footer_prefix}}logotip">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a>			
+			</div>
 			<div class="cols {{footer_prefix}}cols  is--copyright">
-				<div class="row {{footer_prefix}}copyright-row">
-					<div class="cols {{footer_prefix}}copyright-cols  is--copyright">
-						<a href="/" class="{{footer_prefix}}logotip">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a> 
-					</div>
-					<div class="cols {{footer_prefix}}copyright-cols  is--text">
-						<div class="{{footer_prefix}}copyright"><span>&copy;</span> {{contacts.copyright}}</div>
-						<div class="{{footer_prefix}}requisites">ТД Океан 2013 - 2017</div>
-					</div>
-				</div>				
+				<div class="{{footer_prefix}}copyright">2016-2017 <span>&copy;</span> {{contacts.copyright}}</div>
+				<div class="{{footer_prefix}}copyright">{{contacts.name}} <span>ИНН</span> {{contacts.inn}}</div>
+			</div>
+			<div class="cols {{footer_prefix}}cols  is--soc">
+				[[azbntple tpl="/src/block/site/default/social/soc.html" social_prefix="social__"]] 
 			</div>
 			<div class="cols {{footer_prefix}}cols  is--contacts">
 				[[azbntple tpl="/src/block/site/default/social/email-tel.html" social_prefix="social__"]] 
@@ -19,7 +18,7 @@
 			<div class="cols {{footer_prefix}}cols  is--dorohovdesign">
 				<div class="row {{footer_prefix}}dorohovdesign-row"> 
 					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--text">
-						<div class="{{footer_prefix}}dorohovdesign-text">Создание сайта</div>
+						<div class="{{footer_prefix}}dorohovdesign-text">Разработка сайта&nbsp;—</div>
 					</div>
 					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--logotip">
 						<a href="http://dorohovdesign.ru/" target="_blank" class="{{footer_prefix}}dorohovdesign-logotip">

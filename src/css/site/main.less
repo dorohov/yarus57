@@ -16,20 +16,17 @@ html {
 body {
 	color: @b-color;
 	background-color: @b-body-bg;
-	@media @media-device-lg{
-		padding-top: @navbar-top-device;
-	}
+	@media @media-device-lg{padding-top: @navbar-device;}
 	@media @media-size-xs{
 		//padding-top: @navbar-top-xs;
 		overflow-x: hidden; 
 		width: 100%;
 	}
-	@media @media-size-md{
-		padding-top: @navbar-top-md;
-	}
-	@media @media-screen-lg{padding-top: @navbar-top-screen;}
-	@media @media-size-lg{padding-top: @navbar-top-lg;}
-	@media @media-size-xxl{padding-top: @navbar-top-screen-xxl;}
+	@media @media-size-md{padding-top: @navbar-md;}
+	@media @media-screen-lg{padding-top: @navbar-screen;}
+	@media @media-size-lg{padding-top: @navbar-lg;}
+	@media @media-size-xl{padding-top: @navbar-xl;}
+	@media @media-size-xxl{padding-top: @navbar-xxl;}
 	@media @media-device-lg{
 		&::before{
 			content: '';
@@ -50,9 +47,15 @@ body {
 			}			
 		}
 	}	
-	&.is--index-page{
-		@media @media-screen-lg{
-			padding-top: 0;
+	&.is--index-page{ 		
+		@media @media-screen-lg{padding-top: 0px;}
+	}
+}
+.site-wrap{
+    transition: @trs-site;
+	html.is--open-navbar &{
+		@media @media-size-xs-p {
+			transform: translateX(100%);
 		}
 	}
 }
@@ -85,6 +88,13 @@ a{
 		background-size: cover;
 	}
 }
+.bg-pattern{	
+	background-position: center;
+	background-repeat: repeat;
+	&.is--wall{
+		background-image: url("@{url-path-img}/default/bg-wall.jpg");
+	}
+}
 .content-block{
 	&.is--overflow{
 		overflow: hidden;
@@ -103,26 +113,26 @@ a{
 			padding-bottom: 2.7vw;
 		}
 		@media @media-size-xs{
-			min-height: ~"calc(100vh - @{navbar-top-xs})";
+			min-height: ~"calc(100vh - @{navbar-xs})";
 			&._ip__container{padding-top: 45px;}
 		}
 		@media @media-size-sm-p{
-			min-height: ~"calc(100vh - @{navbar-top-sm} - @{footer-device-sm-p})";
+			min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-p})";
 		}
 		@media @media-size-sm-l{
-			min-height: ~"calc(100vh - @{navbar-top-sm} - @{footer-device-sm-l})";
+			min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-l})";
 		}
 		@media @media-screen{		
-			min-height: ~"calc(100vh - @{navbar-top-screen} -  @{footer-screen})";
+			min-height: ~"calc(100vh - @{navbar-screen} -  @{footer-screen})";
 		}
 		@media @media-size-md{		
-			min-height: ~"calc(100vh - @{navbar-top-md} - @{footer-screen-md})"; 
+			min-height: ~"calc(100vh - @{navbar-md} - @{footer-screen-md})"; 
 		}
 		@media @media-size-lg{		
-			min-height: ~"calc(100vh - @{navbar-top-lg} - @{footer-screen})"; 
+			min-height: ~"calc(100vh - @{navbar-lg} - @{footer-screen})"; 
 		}
 		@media @media-size-xxl{		
-			min-height: ~"calc(100vh - @{navbar-top-screen-xxl} - @{footer-screen-xxl})"; 
+			min-height: ~"calc(100vh - @{navbar-xxl} - @{footer-screen-xxl})"; 
 		}
 		&.is--nopadding{
 			padding-top: 0;

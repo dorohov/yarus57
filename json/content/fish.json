@@ -1,20 +1,21 @@
 {
 	"contacts":{
-		"name":"Bride Pretty",
-		"domain":"rybavorle.ru",
-		"domain_link":"http://rybavorle.ru/",
+		"name":"ООО «<span>Ярус</span>»",
+		"domain":"yarus57.ru",
+		"domain_link":"http://yarus57.ru/",
 		"agreement_page":"agreement",
 		"copyright":"Все права защищены",
-		"email":"sale@rybavorle.ru",
-		"email_name":"<span>sale</span>@rybavorle.ru",
-		"phone":"+7 (910) <span>303-37-71</span>", 
-		"phone_tel":"+79103033771",
-		"address":"г.&nbsp;Орёл, ул.&nbsp;Поселковая д.&nbsp;15"
+		"email":"da@yarus57.ru",
+		"email_name":"<span>da</span>@yarus57.ru",
+		"phone":"+7 (4862) <span>50-85-35</span>",  
+		"phone_tel":"+74862508535",  
+		"address":"г.&nbdp;Орёл, бульвар&nbdp;Победы&nbdp;д.6, оф.&nbdp;52", 
+		"inn":"5753066144"
 	},
 	"soc":{
-		"vk":"https://vk.com/",
-		"fb":"https://www.facebook.com/",
-		"inst":"https://www.instagram.com/"
+		"vk":"https://vk.com/yarus57",
+		"fb":"https://www.facebook.com/yarus57/",
+		"inst":"https://www.instagram.com/remont_yarus/"
 	},
 	"url-path-css":"/wp-content/themes/azbnbasetheme/css",
 	"url-path-css":"/css",

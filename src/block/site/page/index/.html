@@ -1,21 +1,12 @@
-[[azbntple 
-	tpl="/src/block/site/default/advantages/panel.html" 
-	block_prefix="advantages-panel__"
-]]
-[[azbntple 
-	tpl="/src/block/site/default/catalog/panel-index-items.html" 
-	catalog_prefix="catalog-panel-day__"
-]]	
-<div class="content-block {{prefix_block}}block" role="main">
-	<div class="container content-block__container  is--nopadding">
+<div class="content-block {{prefix_block}}block  bg-pattern  is--wall" role="main">
+	<div class="container {{prefix_block}}container">
 		[[azbntple 
-			tpl="/src/block/site/default/catalog/panel-index-catalog.html" 
-			catalog_prefix="catalog-category__"
-		]]
+			tpl="/src/block/site/default/portfolio/block-index-tabs.html" 
+			portfolio_prefix="portfolio-tabs__" 
+		]]  
+		[[azbntple 
+			tpl="/src/block/site/default/page-panel/index-text/.html" 
+			block_prefix="page-panel-text__"
+		]]	
 	</div>
 </div>
-[[azbntple 
-	tpl="/src/block/site/default/form/panel.html" 
-	form_prefix="form__"
-	form_mod="is--panel"
-]]	
