@@ -1,15 +1,36 @@
-<div class="content-block {{page_prefix}}block" role="main">	
-	<div class="container content-block__container  is--overflow">	
+<div class="content-block {{prefix_block}}block" role="main">
+	<div class="container content-block__container {{prefix_block}}container"> 
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level1.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="is--center"
+			level_1="О компании"
+		]]		
 		[[azbntple 
 			tpl="/src/block/site/default/page-header/heading.html" 
 			header_prefix="page-header__" 
-			header_mod="is--heading  is--center  is--line"
+			header_mod="is--heading  is--center"
 			header_level="h1"
 			header="О компании"
-		]]
+		]] 
 		[[azbntple 
-			tpl="/src/block/site/default/page-panel/about.html" 
-			block_prefix="page-panel__"
-		]]
-	</div>
+			tpl="/src/block/site/default/about/panel.html" 
+			block_prefix="about-panel__"
+		]]	
+	</div>	
+</div>
+<div class="content-block {{prefix_block}}block  bg-pattern  is--wall">
+	<div class="container content-block__container {{prefix_block}}container-reviews">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--heading  is--center"
+			header_level="h1"
+			header="Отзывы наших клиентов"
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/reviews/panel.html" 
+			block_prefix="reviews-panel__"
+		]]	
+	</div>	
 </div>

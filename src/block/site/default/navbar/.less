@@ -102,12 +102,27 @@
 			@media @media-device-lg{display: block;}
 			@media @media-screen-lg{display: none;} 
 		}
+		&.is--hamburger-screen{ 
+			display: none;	
+		}
+		.navbar-site.is--blog.opacity &.is--hamburger-screen,
+		.navbar-site.is--portfolio.opacity &.is--hamburger-screen,
+		.navbar-site.is--portfolio-item.opacity &.is--hamburger-screen{ 
+			width: 30%;		
+			@media @media-screen-lg{display: block;} 
+			
+		}
 		&.is--tel{ 
 			@media @media-device-lg{display: block;}
 			@media @media-screen-lg{display: none;} 
 		}
 		&.is--brand{
 			@media @media-screen-lg{width: 100%;} 
+			.navbar-site.is--blog.opacity &,			
+			.navbar-site.is--portfolio.opacity &,			
+			.navbar-site.is--portfolio-item.opacity &{			
+				@media @media-screen-lg{width: 70%;} 
+			}	
 		}
 	}
 	&brand{
@@ -197,7 +212,7 @@
 	&collapse-cols{
 		&.is--nav{
 			@media @media-device-lg {margin-bottom: 20px;}
-			@media @media-screen-lg {width: 68%;}
+			@media @media-screen-lg {width: 68%; position: relative;}
 			@media @media-size-lg {width: 64%;} 
 			.navbar-site.is--index &{				
 				@media @media-screen-lg {
@@ -260,6 +275,45 @@
 			font-size: @navbar-fs - 2;
 			line-height: @navbar-lh - 8px;
 		} 
+		&.is--blog,
+		&.is--portfolio,
+		&.is--portfolio-item{
+			display: none;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			background: white;
+		}
+		.navbar-site.is--blog.opacity &,
+		.navbar-site.is--portfolio.opacity &,
+		.navbar-site.is--portfolio-item.opacity &{
+			transition: @trs-site;
+			&.is--nav{
+				opacity: 0;
+			}
+			&.is--blog,
+			&.is--portfolio,
+			&.is--portfolio-item{
+				display: flex;
+				opacity: 1;
+				justify-content: center;
+			}
+		}
+		.navbar-site.is--blog.opacity.is--open &,
+		.navbar-site.is--portfolio.opacity.is--open &,
+		.navbar-site.is--portfolio-item.opacity.is--open &{
+			&.is--nav{
+				opacity: 1;
+			}
+			&.is--blog,
+			&.is--portfolio,
+			&.is--portfolio-item{
+				display: flex;
+				opacity: 0;
+				z-index: -1;
+			}
+		}
 	}
 	&nav-item{
 		@media @media-device-lg{
@@ -390,6 +444,12 @@
 	&hamburger{
 		@media @media-device-lg{}
 		@media @media-screen-lg{display: none;}
+
+		.navbar-site.is--blog &,
+		.navbar-site.is--portfolio &,
+		.navbar-site.is--portfolio-item &{
+			&.is--vine{display: block}
+		}
 	}
 	&hamburger-wrap{
 		display: flex;

@@ -18,6 +18,16 @@
 							<a class="{{navbar_prefix}}brand" href="/">[[azbntple tpl="/src/block/site/default/svg-sprite/logotip.html" icon-name="logotip" ]]
 							</a>
 						</div>
+						<div class="cols {{navbar_prefix}}cols-header  is--hamburger-screen">
+							<div class="{{navbar_prefix}}hamburger  is--vine">
+								<button class="{{navbar_prefix}}hamburger-btn hamburger__item  is--vine" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+									<span class="hamburger__line  is--left"></span>
+									<span class="hamburger__line  is--center"></span>
+									<span class="hamburger__line  is--center-2"></span>
+									<span class="hamburger__line  is--right"></span>
+								</button>
+							</div>
+						</div>
 						<div class="cols {{navbar_prefix}}cols-header  is--tel">
 							[[azbntple 
 								tpl="/src/block/site/default/button/link-icon.html"
@@ -35,33 +45,33 @@
 					<div class="{{navbar_prefix}}collapse-inner">
 						<div class="row {{navbar_prefix}}collapse-row">
 							<div class="cols {{navbar_prefix}}collapse-cols  is--nav">
-								<ul class="{{navbar_prefix}}nav">
+								<ul class="{{navbar_prefix}}nav  is--nav">
 									[[azbntple 
 										tpl="/src/block/site/default/navbar/item.html" 
 										navbar_prefix="navbar__" 
 										navbar_name="Ремонтные работы"
-										navbar_link="##"
+										navbar_link="/services-repairs.html"
 										navbar_mod="  " 
 									]]	
 									[[azbntple 
 										tpl="/src/block/site/default/navbar/item.html" 
 										navbar_prefix="navbar__" 
 										navbar_name="Отдельные виды работ"
-										navbar_link="##"
+										navbar_link="/services-type.html"
 										navbar_mod="  " 
 									]]	
 									[[azbntple 
 										tpl="/src/block/site/default/navbar/item.html" 
 										navbar_prefix="navbar__" 
 										navbar_name="Дизайн интерьера"
-										navbar_link="##"
+										navbar_link="/services-design.html"
 										navbar_mod="  " 
 									]]
 									[[azbntple 
 										tpl="/src/block/site/default/navbar/item.html" 
 										navbar_prefix="navbar__" 
 										navbar_name="Портфолио"
-										navbar_link="##"
+										navbar_link="/portfolio.html"
 										navbar_mod="  " 
 									]]	
 									[[azbntple 
@@ -85,6 +95,89 @@
 										navbar_link="/contacts.html" 
 										navbar_mod="  "
 									]]	   
+								</ul>
+								<ul class="{{navbar_prefix}}nav  is--portfolio-item">
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Описание"
+										navbar_link="/portfolio-item.html"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Дизайн-проекты"
+										navbar_link="/portfolio-item-design.html"
+										navbar_mod="  " 
+									]]	
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Ремонтные работы"
+										navbar_link="/portfolio-item-repairs.html"
+										navbar_mod="  " 
+									]]	
+								</ul>
+								<ul class="{{navbar_prefix}}nav  is--portfolio">
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Проекты под ключ"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Дизайн-проекты"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]	
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Ремонтные работы"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]	
+								</ul>
+								<ul class="{{navbar_prefix}}nav  is--blog">
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Дизайн"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Ремонт"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Советы"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="Стили"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]
+									[[azbntple 
+										tpl="/src/block/site/default/navbar/item.html" 
+										navbar_prefix="navbar__" 
+										navbar_name="События"
+										navbar_link="/#"
+										navbar_mod="  " 
+									]]	
 								</ul>
 							</div>
 							<div class="cols {{navbar_prefix}}collapse-cols  is--right" >

@@ -8,19 +8,32 @@
 		]] 		
 	</head>
 	<body> 
+		
 		[[azbntple 
 			tpl="/src/block/site/default/navbar/.html"
 			class="navbar-site scroll"
 			navbar_prefix="navbar__"   
-		]] 	  
-		[[azbntple 
-			tpl="/src/block/site/page/about/.html"
-			page_prefix="about-page__"     
-		]]	
-		[[azbntple 
-			tpl="/src/block/site/default/footer/.html"
-			footer_prefix="footer__" 
-		]]
+			navbar_mod="  "     
+		]] 
+		<div class="site-wrap">
+			[[azbntple 
+				tpl="/src/block/site/page/about/.html"
+				prefix_block="about-page__"      
+			]]	
+			[[azbntple 
+				tpl="/src/block/site/default/form/panel-consultation.html" 
+				form_prefix="form-panel__"
+				form_mod="is--consultation"
+				form_bg="bg-form-consultation.jpg"
+			]]	
+			[[azbntple 
+				tpl="/src/block/site/default/footer/.html"
+				footer_prefix="footer__" 
+			]]
+		</div>
 		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/owl.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/fancybox3.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/validationEngine.html" ]] 
 	</body>
 </html>

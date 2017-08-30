@@ -97,6 +97,12 @@
 		border-bottom: 1px solid;
 		&:hover{
 			border-color: fadeout(@b-color-a, 100%);
+		}
+		&.is--lg{
+			font-size: @b-fs + 6;			
+			@media @media-notsmart {
+				letter-spacing: 1px;
+			}
 		}	
 	}
 }

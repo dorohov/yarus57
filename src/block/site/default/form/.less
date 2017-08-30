@@ -13,6 +13,7 @@
 			}
 		}
 		&.is--consultation{
+			color: @white;		
 			&::before{
 				content: '';
 				position: absolute;
@@ -23,7 +24,9 @@
 				background-color: fadeout(#736677, 20%);
 			}
 		} 
-		color: @white;
+		&.is--consultation-min{			
+			color: @b-color;
+		}
 	}
 	&container{
 		position: relative;
@@ -42,6 +45,13 @@
 				padding-bottom: 4vw; 
 			}
 		}
+		&.is--consultation-min{
+			@media @media-screen {
+				padding-top: 3.25vw;
+				padding-bottom: 3.25vw;
+			}
+			
+		}
 	}
 	&panel-inner{
 		&.is--view{
@@ -52,12 +62,17 @@
 			max-width: 840px;
 			margin: 0 auto;
 		}
+		&.is--consultation-min{
+			max-width: 990px;
+			margin: 0 auto;
+		}
 	}
 	&panel-note{
 		margin-bottom: 25px;
 		@media @media-screen {
 			margin-bottom: 2.9vw;
 		}
+
 	}
 	&panel-note-row{
 		align-items: center;
@@ -79,6 +94,14 @@
 				.makeCols(6.35, 12);
 			}
 			ul{margin-bottom: 0}
+			ul.is--styled{
+				margin-bottom: 0;
+				li{
+					&::before{
+						background-image: url("@{url-path-img}/svg/ul-marker-white.svg");
+					}
+				}
+			}
 		}
 	}
 	&dir-row{

@@ -105,11 +105,11 @@ a{
 .content-block__{
 	&container{	
 		@media @media-device {
-			padding-top: 15px;
+			padding-top: 20px;
 			padding-bottom: 45px;
 		}
 		@media @media-screen {
-			padding-top: 2.7vw;
+			padding-top: 3.2vw;
 			padding-bottom: 2.7vw;
 		}
 		@media @media-size-xs{
@@ -144,6 +144,9 @@ a{
 		}
 		&.is--nopadding-bottom{
 			padding-bottom: 0;
+		}
+		&.is--noheight{
+			min-height: inherit;
 		}
 		&.is--overflow{
 			overflow: hidden;

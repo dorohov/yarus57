@@ -1,7 +1,7 @@
 .page-header__{	
 	&block{	
 		@media @media-device {margin-bottom: 30px;}
-		@media @media-screen {margin-bottom: 2.6vw;}
+		@media @media-screen {margin-bottom: 2.3vw;}
 		&.is--form-panel{
 			margin-bottom: 15px;
 		}
@@ -24,7 +24,20 @@
 		&.is--breadcrumb{
 			@media @media-device {margin-bottom: 15px;}
 			@media @media-screen {margin-bottom: 1.6vw;}
+		}	
+		&.is--portfolio{
+			margin-bottom: 15px;
 		}		
+		&.is--design{
+			margin-bottom: 15px;
+		}	
+		&.is--steps{
+			max-width: 930px;
+			margin-bottom: 20px;
+		}	
+		&.is--portfolio-card{
+			@media @media-screen {margin-bottom: 4vw;}
+		}
 	}
 	&heading{
 		color: @page_header_color;
@@ -71,6 +84,9 @@
 			font-weight: 700;	
 			.calcFontSize(20, 38, 320, 1680);
 			.calcLineHeight(26, 46, 320, 1680);	
+			&.is--consultation-min{			
+				color: @b-color;
+			}
 		}
 		&.is--catalog-item{
 			font-weight: 700;
@@ -90,6 +106,11 @@
 			.calcFontSize(20, 30, 320, 1680);
 			.calcLineHeight(26, 36, 320, 1680);	
 			//text-align: center;
+		}
+		&.is--steps{
+			font-weight: 700;
+			.calcFontSize(20, 34, 320, 1680);
+			.calcLineHeight(22, 36, 320, 1680);			
 		}
 	}
 	&heading-small{
@@ -119,6 +140,12 @@
 			margin-bottom: 20px;
 			@media @media-screen {
 				margin-bottom: 1.9vw;
+			}
+			&.is--consultation-min{			
+				color: @b-color;
+				@media @media-screen {
+					margin-bottom: 2.9vw;
+				}
 			}
 		}
 		/*&.is--search{

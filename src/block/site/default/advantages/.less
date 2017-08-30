@@ -1,12 +1,8 @@
 .advantages-panel__{
 	&block{
-		@media @media-device {
-			padding-top: @panel-gutter-device;
-			padding-bottom: @panel-gutter-device;
-		}
+		padding-bottom: 40px;
 		@media @media-screen {
-			padding-top: @panel-gutter-screen - 1vw;
-			padding-bottom: @panel-gutter-screen  + 3vw;
+		    padding-bottom: 6.7vw;
 		}
 	}
 	&row{
@@ -30,27 +26,38 @@
 	}
 	&item{
 		text-align: center;
+		padding-top: 15px;
+		position: relative;
+		&:before{
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			width: 145px;
+			height: 145px;
+			background-color: #f5f3ef;
+			.advantages-panel__cols:nth-child(2n+1) &{
+				content: '';
+			}
+		}
 	}
 	&preview{
-		margin: 0 auto 25px;
-		@media @media-device{
-			width: 120px;
-			height: 120px;
-		}
-		@media @media-screen{
-			width: 140px;
-			height: 140px;			
-		}
+		margin: 0 auto 15px;
+		width: 64px;
+		height: 64px;	
+		color: @yellow-orange;
+		position: relative;
+		z-index: 2;	
+		
 	}
 	&note{
 		@media @media-device{
-			font-size: @b-fs - 2;
-			line-height: @b-lh - 6;
 			br {display: none}
 		}
-		@media @media-screen {			
-			.calcFontSize(16, 18, 320, 1680);
-			.calcLineHeight(22, 24, 320, 1680); 
-		}
+		line-height: @b-lh - 6;
+		position: relative;
+		z-index: 2;	
 	}
 }

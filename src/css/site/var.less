@@ -130,7 +130,7 @@
 //===== footer =====//
 @footer-color:			@white; 
 @footer-color-hover:	@white; 
-@footer-bg:				#d0b28a;
+@footer-bg:				#dbaf7d;
 @footer-ff:				@b-ff; 
 @footer-fs:				@b-fs; 
 @footer-lh:				@b-lh; 
@@ -138,10 +138,10 @@
 /*@footer-xs:				75px;
 @footer-sm:				75px;
 @footer-device:			75px;*/
-@footer-device-sm-p:	132px;
+@footer-device-sm-p:	80px;
 @footer-device-sm-l:	84px;
 @footer-screen:			134px;
-@footer-screen-md:		84px;
+@footer-screen-md:		150px;
 @footer-screen-xxl:		134px;
 //===== page-header =====//
 @page_header_color: 	@b-color;
@@ -256,7 +256,8 @@
 	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
 }
 .makeCols(@columns, @grid-columns) {
-    width: percentage((@columns / @grid-columns));
+    flex-basis: percentage((@columns / @grid-columns));
+    max-width: percentage((@columns / @grid-columns));
 }
 .makeColsOffset(@columns, @grid-columns) {
 	@percentage: percentage((@columns / @grid-columns ));
@@ -281,8 +282,8 @@
 	transition: @trs-btn;
 	border: 0;
 }
-.brad(@rad: 5px){
-	border-radius: @rad;
+.brad(@rad_tl: 5px, @rad_tr: 5px, @rad_br: 5px, @rad_bl: 5px){
+	border-radius: @rad_tl @rad_tr @rad_br @rad_bl;
 }
 #site {
 	.bi(@img:'') {
