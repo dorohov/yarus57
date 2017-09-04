@@ -21,7 +21,7 @@
 <link href="/css/site.css" rel="stylesheet"> 		
 	</head>
 	<body> 
-		<nav class="navbar navbar-site scroll  {{navbar_mod}} opacity fixed scroll-navbar">
+		<nav class="navbar navbar-site scroll     opacity fixed scroll-navbar">
 	<div class="container navbar__container">
 		<div class="row navbar__row">
 			<div class="cols navbar__cols  is--header"> 				
@@ -258,18 +258,18 @@
 		</div>
 	</div>
 </nav> 	  
-		<div class="content-block error-page__block" role="main">	
-	<div class="container content-block__container">
-		<div class="text__container">
-			<div class="page-header__block  is--heading  is--center  is--line">
-	<h1  class="page-header__heading  is--heading  is--center  is--line"><span>Страница не найдена</span></h1>		
+		<div class="content-block error-page__block" role="main">
+	<div class="error-page__bg"></div>	
+	<div class="container error-page__container content-block__container"> 
+		<div class="page-header__block  is--heading">
+	<h1  class="page-header__heading  is--heading"><span>Страница не найдена</span></h1>		
 </div>	
-			<div class="text__block">
-				<p style="text-align:center">Запрашиваемая Вами страница удалена или никогда не существовала.</p>
-				<p style="text-align:center">
-					<a href="/#" class="btn__item   ">Ha главную</a>
-				</p>
-			</div>
+		<div class="error-page__text text__block">
+			<p>Простите, я&nbsp;не&nbsp;могу найти эту страницу. Возможно вы&nbsp;неправильно набрали адрес, или такой страницы в&nbsp;моей базе данных больше не&nbsp;существует.</p>
+			<p>Попробуйте перейти на&nbsp;<a href="/">главную страницу</a> и&nbsp;начать поиск заново.</p>
+			<p>
+				<a href="/#" class="btn__item   ">Ha главную</a>
+			</p>
 		</div>
 	</div>
 </div>	

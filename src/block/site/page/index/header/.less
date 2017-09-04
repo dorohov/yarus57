@@ -91,12 +91,15 @@
 	}
 	&heading{
 		font-family: @b-ff;
-		font-weight: 700;
+		font-weight: 400;
 		color: @white;
 		margin: 0;
 		letter-spacing: 0.5px;
-		.calcFontSize(18, 28, 320, 1680);
-		.calcLineHeight(24, 34, 320, 1680);			
+		.calcFontSize(16, 28, 320, 1680);
+		.calcLineHeight(22, 34, 320, 1680);
+		@media @media-notsmart {			
+			font-weight: 700;
+		}			
 	}
 	&heading-item{
 		display: block;
@@ -105,10 +108,11 @@
 		}
 		&.is--lg{
 			.calcFontSize(24, 55, 320, 1680);
-			.calcLineHeight(30, 60, 320, 1680);	
+			.calcLineHeight(26, 60, 320, 1680);	
 			font-family: @b-ff-2;
 			font-weight: 400;
-			margin-bottom: 1.2vw;
+			margin-bottom: 15px;
+			@media @media-notsmart {margin-bottom: 1.2vw;}
 		}
 	}
 }

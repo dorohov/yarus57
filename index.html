@@ -553,7 +553,7 @@
 				</div>	
 			</div>
 			<div class="cols form__cols  is--inline  is--btn">
-				<button type="submit" class="btn__item  is--form  is--yellow">Записаться на просмотр
+				<button type="submit" class="btn__item  is--form-inline  is--yellow">Записаться на просмотр
 				</button>
 			</div>
 			<div class="cols form__cols  is--inline  is--agreement">
@@ -597,7 +597,7 @@
 			</ul>
 			<div class="portfolio-tabs__link">
 				<a href="#"></a>
-				<a href="##" class="btn-link__item   ">Смотреть все виды работ</a>
+				<a href="/portfolio.html" class="btn-link__item   ">Смотреть все виды работ</a>
 			</div>
 		</div>
 		<div class="cols portfolio-tabs__cols  is--cols-9">		
@@ -1078,22 +1078,31 @@
 		<div class="cols page-panel-text__cols  is--cols-8">	
 			<div class="page-panel-text__owl owl-one  is--round">
 				<div class="page-panel-text__owl-item">
-					<img src="/img/temp/index-cost-item1.jpg" alt="">
-					<div class="page-panel-text__owl-note">
+					<a href="/services-repairs-item.html">
+						<img src="/img/temp/index-cost-item1.jpg"
+						data-src-0="/img/temp/index-cost-item1-p.jpg"
+						data-src-451="/img/temp/index-cost-item1.jpg"
+						alt="">
+					</a>					
+					<!--<div class="page-panel-text__owl-note">
 						<a href="##" class="btn__item is--slider">Подробнее</a>
-					</div>
+					</div>-->
 				</div>
 				<div class="page-panel-text__owl-item">
-					<img src="/img/temp/index-cost-item2.jpg" alt="">
-					<div class="page-panel-text__owl-note">
-						<a href="##" class="btn__item is--slider">Подробнее</a>
-					</div>
+					<a href="/services-repairs-item.html">
+					<img src="/img/temp/index-cost-item2.jpg"
+						data-src-0="/img/temp/index-cost-item2-p.jpg"
+						data-src-451="/img/temp/index-cost-item2.jpg" 
+						alt="">
+					</a>	
 				</div>
 				<div class="page-panel-text__owl-item">
-					<img src="/img/temp/index-cost-item3.jpg" alt="">
-					<div class="page-panel-text__owl-note">
-						<a href="##" class="btn__item is--slider">Подробнее</a>
-					</div>
+					<a href="/services-repairs-item.html">
+						<img src="/img/temp/index-cost-item3.jpg"
+						data-src-0="/img/temp/index-cost-item3-p.jpg"
+						data-src-451="/img/temp/index-cost-item3.jpg"
+						alt="">
+					</a>	
 				</div>
 			</div>	
 		</div>
@@ -1159,7 +1168,7 @@
 				</div>	
 			</div>
 			<div class="cols form__cols  is--inline  is--btn">
-				<button type="submit" class="btn__item  is--form  is--yellow">Отправить
+				<button type="submit" class="btn__item  is--form-inline  is--yellow">Отправить
 				</button>
 			</div>
 			<div class="cols form__cols  is--inline  is--agreement">
@@ -1299,5 +1308,14 @@
 		<link rel="stylesheet" type="text/css" href="/css/owl.jquery.css">
 <script src="/js/owl.jquery/owl.carousel.min.js"></script> 
 <script src="/js/owl.jquery/owl.ready.js"></script>  
+		<script src="/js/response.min.js" ></script> 
+<script>
+	Response.create({
+	    prop: "width", 
+	    prefix: "data-src- r src", 
+	    breakpoints: [1281,1025,1024,768,451,320,0], 
+	    lazy: true
+	});
+</script> 
 	</body>
 </html>

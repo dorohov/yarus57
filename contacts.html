@@ -20,8 +20,8 @@
 
 <link href="/css/site.css" rel="stylesheet"> 		
 	</head>
-	<body> 
-		<nav class="navbar navbar-site scroll  {{navbar_mod}} opacity fixed scroll-navbar">
+	<body> 		
+		<nav class="navbar navbar-site scroll     opacity fixed scroll-navbar">
 	<div class="container navbar__container">
 		<div class="row navbar__row">
 			<div class="cols navbar__cols  is--header"> 				
@@ -258,57 +258,85 @@
 		</div>
 	</div>
 </nav> 	  
-		<div class="content-block contacts-page__block" role="main">
+		<div class="site-wrap">
+			<div class="content-block contacts-page__block" role="main">
 	<div class="container content-block__container">		
-		<div class="page-header__block  is--heading  is--center">
-	<h1  class="page-header__heading  is--heading  is--center"><span>Контакты</span></h1>		
+		<div class="contacts-page__panel">	
+	<div class="contacts-page__bg bg-pattern  is--wall"></div>	
+	<div class="contacts-page__row row  is--wrap  is--gutter">
+		<div class="contacts-page__cols cols  is--cols-6  is--heading">	
+			<div class="contacts-page__heading-block">
+				<h1 class="contacts-page__heading">Cвяжитесь<br> с нами любым удобным для вас способом</h1>
+				<button type="button" class="btn__item is--map" data-toggle="modal" data-target="#modal-map">  </button>
+			</div>
+			
+
+		</div>
+		<div class="contacts-page__cols cols  is--cols-6  is--note">	
+			<div class="contacts-page__note">
+				<div>
+					<a href="mailto:da@yarus57.ru" class="social__item  is--contacts-page">
+	<div class="social__icon">
+		<svg class="icon-svg icon-contacts-email" role="img">
+			<use xlink:href="/img/svg/sprite.svg#contacts-email"></use>
+		</svg>
+	</div>
+	<div class="social__name"><span>da</span>@yarus57.ru</div>
+</a>
+				</div>
+				<div>
+					<a href="tel:+74862508535" class="social__item  is--contacts-page">
+	<div class="social__icon">
+		<svg class="icon-svg icon-contacts-tel" role="img">
+			<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
+		</svg>
+	</div>
+	<div class="social__name">+7 (4862) <span>50-85-35</span>,</div>
+</a>
+<a href="tel:+79534780222" class="social__item  is--contacts-page">
+	<div class="social__name">+7 (953) <span>478-02-22</span></div>
+</a>
+				</div>
+				<div>
+					<div class="social__item  is--contacts-page">
+	<div class="social__icon">
+		<svg class="icon-svg icon-contacts-clock" role="img">
+			<use xlink:href="/img/svg/sprite.svg#contacts-clock"></use>
+		</svg>
+	</div>
+	<div class="social__name">Пн-Пт: <span>с&nbsp;9:00 до&nbsp;18:00</span>;</div>
 </div>
-		<div class="contacts-panel__block">	
-	<div class="contacts-panel__row row  is--wrap  is--gutter">
-		<div class="contacts-panel__cols cols">	
-			<div class="social__item  is--contacts">
-	<div class="social__icon">
-		<svg class="icon-svg icon-location" role="img">
-			<use xlink:href="/img/svg/sprite.svg#location"></use>
-		</svg>
-	</div>
-	<div class="social__name">г.&nbsp;Орел, ул.&nbsp;Поселковая д.&nbsp;15</div>
+<div class="social__item  is--contacts-page">
+	<div class="social__name">Сб-Вс: <span>выходной</span></div>
 </div>
-		</div>
-		<div class="contacts-panel__cols cols">
-			<a href="mailto:sale@rybavorle.ru" class="social__item  {{social_mod}}">
+				</div>
+				<div>
+					<div class="social__item  is--contacts-page">
 	<div class="social__icon">
-		<svg class="icon-svg icon-email" role="img">
-			<use xlink:href="/img/svg/sprite.svg#email"></use>
+		<svg class="icon-svg icon-contacts-location" role="img">
+			<use xlink:href="/img/svg/sprite.svg#contacts-location"></use>
 		</svg>
 	</div>
-	<div class="social__name"><span>sale</span>@rybavorle.ru</div>
-</a>
-		</div>
-		<div class="contacts-panel__cols cols">
-			<a href="tel:+79103033771" class="social__item  is--contacts">
-	<div class="social__icon">
-		<svg class="icon-svg icon-tel" role="img">
-			<use xlink:href="/img/svg/sprite.svg#tel"></use>
+	<div class="social__name">г.&nbsp;Орёл, <span>бульвар&nbsp;Победы&nbsp;д.6, оф.52</span></div>
+</div>
+				</div>
+				<div class="contacts-page__btn">					
+					<button type="button" class="btn__item is--icon" data-toggle="modal" data-target="#modal-reviews">
+	Напишите нам
+	<div class="btn__item-icon">
+		<svg class="icon-svg icon-btn-email" role="img">
+			<use xlink:href="/img/svg/sprite.svg#btn-email"></use>
 		</svg>
 	</div>
-	<div class="social__name">+7 (910) <span>303-37-71</span></div>
-</a>
-<a href="tel:+74862734891" class="social__item  is--contacts">
-	<div class="social__name">+7 (4862) <span>73-48-91</span></div>
-</a>
-<a href="tel:+74862734897" class="social__item  is--contacts">
-	<div class="social__name">+7 (4862) <span>73-48-97</span></div>
-</a>
+</button>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="contacts-panel__map">
-		<div class="contacts-panel__map-item" id="map-rybavorle"></div>
 	</div>
 </div>
 	</div>
 </div>	
-		<footer class="footer__block">	
+			<footer class="footer__block">	
 	<div class="container footer__container">
 		<div class="row footer__row">
 			
@@ -395,6 +423,72 @@
 		</div>
 	</div>
 </footer>
+		</div>
+
+		<div class="modal fade modal-base__modal" id="modal-reviews" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-base__dialog">
+		<div class="modal-body modal-base__body bg-pattern  is--wall" >
+			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+			</button>
+			<div class="modal-content modal-base__content">
+				<div class="page-header__block  is--modals  is--center">
+	<h4 class="page-header__heading  is--modals  is--center"><span>Напишите нам!</span></h4>	
+	<div class="page-header__heading-small  is--modals  is--center">Наши менеджеры скоро свяжутся с вами.</div>		
+</div>	
+				<form action="#" class="form__block    "  >
+	<div class="form__inner    "  >
+		<div class="row form__row  is--wrap">
+			<div class="cols form__cols      is--name">
+				<div class="form__item">
+					<input type="text" class="form__control form-control validate[required, custom[onlyLetterSp]]    " id="fmr[name]" name="fmr[Имя]" placeholder="Ваше имя">
+				</div>	
+			</div>
+			<div class="cols form__cols      is--tel">
+				<div class="form__item">
+					<input type="tel" class="form__control form-control validate[required,custom[phone]]    " name="fmr[Телефон]" placeholder="Ваш телефон">
+				</div>	
+			</div>
+			<div class="cols form__cols      is--note">
+				<div class="form__item">
+					<textarea class="form__control form-control validate[required]    " name="fmr[Сообщение]" placeholder="Ваше сообщение"></textarea>
+				</div>	
+			</div>
+			<div class="cols form__cols      is--agreement">
+				<div class="rect-switch form__item">
+	                <input class="rect-switch__input validate[required]" id="fmr[processing]" name="fmr[processing]" type="checkbox" checked />
+	                <label for="fmr[processing]" class="rect-switch__label  is--bg-white"></label> 
+					<label for="fmr[processing]" class="rect-switch__text"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols form__cols      is--btn">
+				<button type="submit" class="btn__item is--form is--yellow">Отправить
+				</button>
+			</div>
+		</div>	
+	</div> 
+</form> 	
+			</div> 
+		</div>
+	</div>
+</div>
+		<div class="modal fade modal-map__modal" id="modal-map" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-map__dialog">
+		<div class="modal-body modal-map__body" >
+			<button type="button" class="btn-site  modal-map__close  modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+			</button>
+			<div id="map-google" class="modal-map__map"></div> 
+		</div>
+	</div>
+</div>
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

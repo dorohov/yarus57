@@ -45,18 +45,67 @@
 			padding: 9px 30px 7px;
 			font-weight: 400;			
 		}
-		&.is--form{
+		&.is--form-inline{
 			display: block;
 			width: 100%;
 		}	
 		&.is--slider{
 			border: 2px solid @white;
 			font-weight: 400;
+			padding: 5px 10px;
 			@media @media-notsmart {
 				padding: 11px 3.8vw;
 				font-size: @b-fs + 2px; 
 			}
 		}	
+		&.is--map{
+			background: none;
+			padding: 0;
+			background-image: url("@{url-path-img}/default/icon-map-btn.png");
+			background-position: center;
+			background-repeat: no-repeat;		
+			animation-duration: 2s;
+			animation-fill-mode: both;
+			animation-iteration-count: infinite;
+			animation-name: animated-btn;
+			
+			max-width: 160px;
+			max-height: 180px;
+			min-width: 100px;
+			min-height: 120px;
+			background-size: cover;
+			width: 8.75vw;
+			height: 9.75vw;
+
+			@media @media-size-xs{
+				margin: 0 auto;
+				background-size: cover;	
+				display: block;
+			}
+			@media @media-notsmart{
+				position: absolute;
+				top: 0;
+				right: 2vw;	
+			}
+			@media @media-size-sml {
+				right: 0vw;	
+			}
+		}
+		&.is--icon{
+			font-weight: 400;
+			position: relative;
+			padding: 13px 65px 13px 30px;
+			font-size: @b-fs;
+		}
+	}
+	&item-icon{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		right: 25px;
+		transform: translateY(-50%);
+		svg{display: block;}
 	}
 	&icon{
 		outline: none;
@@ -86,6 +135,29 @@
 				color: @b-color;
 			}
 		}
+	}
+}
+@keyframes animated-btn {	
+	from {
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0px, -15px);
+	}
+	35%{
+		transform: translate(-10px, -15px);
+	}
+	50%{
+		transform: translate(-10px, -10px);
+	}
+	65%{
+		transform: translate(0px, -10px);
+	}
+	80%{
+		transform: translate(-10px, 0px);
+	}
+	to{
+		transform: translateX(0, 0); 
 	}
 }
 .btn-link__{

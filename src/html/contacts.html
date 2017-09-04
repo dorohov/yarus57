@@ -7,20 +7,35 @@
 			description=" "
 		]] 		
 	</head>
-	<body> 
+	<body> 		
 		[[azbntple 
 			tpl="/src/block/site/default/navbar/.html"
 			class="navbar-site scroll"
 			navbar_prefix="navbar__"   
+			navbar_mod="  "     
 		]] 	  
+		<div class="site-wrap">
+			[[azbntple 
+				tpl="/src/block/site/page/contacts/.html"
+				page_prefix="contacts-page__"     
+			]]	
+			[[azbntple 
+				tpl="/src/block/site/default/footer/.html"
+				footer_prefix="footer__" 
+			]]
+		</div>
+
 		[[azbntple 
-			tpl="/src/block/site/page/contacts/.html"
-			page_prefix="contacts-page__"     
-		]]	
-		[[azbntple 
-			tpl="/src/block/site/default/footer/.html"
-			footer_prefix="footer__" 
+			tpl="/src/block/site/default/modals/reviews.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-reviews"
 		]]
+		[[azbntple 
+			tpl="/src/block/site/default/modals/map.html"
+			modals_prefix="modal-map__"  
+			modals_id="modal-map"
+		]]
+
 		[[azbntple tpl="/src/block/site/default/script/script.html" ]] 
 		[[azbntple tpl="/src/block/site/default/script/googleMap.html" ]]  
 	</body>

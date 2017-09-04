@@ -57,6 +57,7 @@
 	&numeric-cols{
 		@media @media-size-xs-p {
 			.makeCols(6, 12);
+			.makeCols(4, 12);
 		}
 	}
 	&text-block{
@@ -123,10 +124,17 @@
 			font-family: @b-ff-2;
 			.calcFontSize(40, 70, 320, 1680);
 			.calcLineHeight(42, 72, 320, 1680);
+			@media @media-size-xs-p {
+				display: block;
+			}
 		}
 	}
 	&text{
 		font-size: @b-fs + 2;
+		@media @media-size-xs-p {
+			font-size: @b-fs - 5;
+			line-height: @b-lh - 9;
+		}
 	}
 }
 .adv-card-panel__{
