@@ -142,7 +142,7 @@
 				color: @white;
 				max-width: 220px;
 				height: auto;
-				
+				max-height: 100px;				
 			}
 		}
 		.navbar-site.is--index.opacity &{
@@ -256,6 +256,7 @@
 	//nav
 	&nav{
 		margin: 0;
+		padding: 0;
 		list-style: none;
 		display: flex;
 	    align-items: center;
@@ -360,6 +361,12 @@
 			position: static;
 			padding-left: 10px;
 			padding-right: 10px;
+			html.msie .navbar-site.is--index &{
+				max-width: 120px;
+			}
+			html.msie .navbar-site.opacity &{
+				max-width: none;
+			}
 		}
 	}
 	&nav-link{

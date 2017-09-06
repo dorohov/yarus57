@@ -141,6 +141,7 @@
 		@media @media-screen {			
 			font-size: @b-fs + 2;
 			line-height: @b-lh - 8;
+			html.msie &{max-width: 220px;}
 		}
 	}
 }
@@ -324,11 +325,13 @@
 		font-weight: 400;		
 		position: relative;
 		padding-left: 25px; 
+		display: block;
 	}
 	&radio-icon{
 		width: 65px;
 		height: 65px;
 		margin: 0 auto;
+		display: block;
 		color: fadeout(@white, 50%);
 	}
 	&radio-input{

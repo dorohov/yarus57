@@ -9,16 +9,20 @@
 	&flower{
 		@media @media-screen {
 			position: absolute;
+			z-index: 1;
 			left: -6vw;
 			bottom: 0;
 			max-width: 380px;
 			max-height: 380px;
 			width: 21vw;
 			height: 21vw;
-			background-image: url("@{url-path-img}/temp/bg-flower.png");
+			background-image: url("@{url-path-img}/default/bg-flower.png");
 		}	
 	}
-	&row{}
+	&row{
+		position: relative;
+		z-index: 2;
+	}
 	&cols{		
 		&.is--cols-3{
 			@media @media-device {
@@ -193,20 +197,10 @@
 }
 .portfolio-navbar__{
 	&block{
-		margin-bottom: 35px;
-		@media @media-screen {
-			margin-bottom: 3.8vw;
-		}
-	}
-	&nav{
-		list-style: none;
-		margin: 0 auto;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
 		max-width: 570px;
-		justify-content: space-between;
-		//@media @media-size-xs-p {justify-content: center;}
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 35px;
 		position: relative;		
 		&::after{
 			content: '';
@@ -221,16 +215,22 @@
 				display: none;
 			}
 		}
+		@media @media-screen {
+			margin-bottom: 3.8vw;
+		}
+	}
+	&nav{
+		list-style: none;
+		margin: 0 -15px;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		//@media @media-size-xs-p {justify-content: center;}
 	}
 	&item{
 		padding: 0 15px;
-		@media @media-size-xs-p {padding: 0; .makeCols(12, 12);}
-		&:first-child{
-			padding-left: 0;
-		}
-		&:last-child{
-			padding-right: 0;
-		}
+		@media @media-size-xs-p {.makeCols(12, 12);}
 	}
 	&link{
 		display: inline-block;
@@ -365,6 +365,7 @@
                 background-color: fadeout(@b-color-a, 100%);
             }        	
         }
+        //html.msie &.is--twentytwenty{display: none;}
 	}
 	&slick-twentytwenty{
 		//@media @media-notsmart {

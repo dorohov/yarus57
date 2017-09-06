@@ -1,5 +1,5 @@
 
-var url = window.location.pathname;
+var url = window.location.href;
 $('.navbar__nav a[href="'+url+'"]').parent().addClass('is--active'); 
 $('.navbar__nav-dropdown-menu a[href="'+url+'"]').parent().addClass('is--active'); 
 /*

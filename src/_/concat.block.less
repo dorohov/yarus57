@@ -173,6 +173,13 @@
 .blog-page__{
 	&block{}
 	&row{}
+	&cols{
+		&.is--cols-3{
+			@media @media-size-sm {
+				.makeCols(6, 12);
+			}
+		}
+	}
 }
 .blog-card__{
 	&item{
@@ -476,6 +483,10 @@
 			padding: 13px 65px 13px 30px;
 			font-size: @b-fs;
 		}
+		&.is--hidden{
+			visibility: hidden;
+			opacity: 0;
+		}
 	}
 	&item-icon{
 		width: 24px;
@@ -621,8 +632,9 @@
 	}
 	&text.text__block{
 		line-height: @b-lh - 5;
+		ol,
 		ul.is--styled{
-			margin-bottom: 0;
+			margin-bottom: 20px;
 			li{
 				line-height: @b-lh - 7;				
 			}
@@ -799,6 +811,9 @@
 		}
 		@media @media-screen {
 			padding: 50px 0;
+		}
+		html.msie &{
+			background: @footer-bg;
 		}
 	}
 	&container{}
@@ -1111,6 +1126,7 @@
 		@media @media-screen {			
 			font-size: @b-fs + 2;
 			line-height: @b-lh - 8;
+			html.msie &{max-width: 220px;}
 		}
 	}
 }
@@ -1294,11 +1310,13 @@
 		font-weight: 400;		
 		position: relative;
 		padding-left: 25px; 
+		display: block;
 	}
 	&radio-icon{
 		width: 65px;
 		height: 65px;
 		margin: 0 auto;
+		display: block;
 		color: fadeout(@white, 50%);
 	}
 	&radio-input{
@@ -1711,6 +1729,10 @@ textarea.form__control{
 		width: 42px;
 		height: 42px;
 		padding: 10px;
+		svg{
+			width: 18px;
+			height: 18px;
+		}
 	}
 	@media @media-size-xs{
 		top: 5px;
@@ -1722,6 +1744,10 @@ textarea.form__control{
 		width: 32px;
 		height: 32px; 
 		padding: 7px;
+		svg{
+			width: 14px;
+			height: 14px;
+		}
 	}	
 	svg{display: block;}
 	&:hover{
@@ -1946,7 +1972,7 @@ textarea.form__control{
 				color: @white;
 				max-width: 220px;
 				height: auto;
-				
+				max-height: 100px;				
 			}
 		}
 		.navbar-site.is--index.opacity &{
@@ -2060,6 +2086,7 @@ textarea.form__control{
 	//nav
 	&nav{
 		margin: 0;
+		padding: 0;
 		list-style: none;
 		display: flex;
 	    align-items: center;
@@ -2164,6 +2191,12 @@ textarea.form__control{
 			position: static;
 			padding-left: 10px;
 			padding-right: 10px;
+			html.msie .navbar-site.is--index &{
+				max-width: 120px;
+			}
+			html.msie .navbar-site.opacity &{
+				max-width: none;
+			}
 		}
 	}
 	&nav-link{
@@ -2713,16 +2746,20 @@ textarea.form__control{
 	&flower{
 		@media @media-screen {
 			position: absolute;
+			z-index: 1;
 			left: -6vw;
 			bottom: 0;
 			max-width: 380px;
 			max-height: 380px;
 			width: 21vw;
 			height: 21vw;
-			background-image: url("@{url-path-img}/temp/bg-flower.png");
+			background-image: url("@{url-path-img}/default/bg-flower.png");
 		}	
 	}
-	&row{}
+	&row{
+		position: relative;
+		z-index: 2;
+	}
 	&cols{		
 		&.is--cols-3{
 			@media @media-device {
@@ -2897,20 +2934,10 @@ textarea.form__control{
 }
 .portfolio-navbar__{
 	&block{
-		margin-bottom: 35px;
-		@media @media-screen {
-			margin-bottom: 3.8vw;
-		}
-	}
-	&nav{
-		list-style: none;
-		margin: 0 auto;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
 		max-width: 570px;
-		justify-content: space-between;
-		//@media @media-size-xs-p {justify-content: center;}
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 35px;
 		position: relative;		
 		&::after{
 			content: '';
@@ -2925,16 +2952,22 @@ textarea.form__control{
 				display: none;
 			}
 		}
+		@media @media-screen {
+			margin-bottom: 3.8vw;
+		}
+	}
+	&nav{
+		list-style: none;
+		margin: 0 -15px;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		//@media @media-size-xs-p {justify-content: center;}
 	}
 	&item{
 		padding: 0 15px;
-		@media @media-size-xs-p {padding: 0; .makeCols(12, 12);}
-		&:first-child{
-			padding-left: 0;
-		}
-		&:last-child{
-			padding-right: 0;
-		}
+		@media @media-size-xs-p {.makeCols(12, 12);}
 	}
 	&link{
 		display: inline-block;
@@ -3069,6 +3102,7 @@ textarea.form__control{
                 background-color: fadeout(@b-color-a, 100%);
             }        	
         }
+        //html.msie &.is--twentytwenty{display: none;}
 	}
 	&slick-twentytwenty{
 		//@media @media-notsmart {
@@ -3574,7 +3608,7 @@ textarea.form__control{
 			position: relative;
 			height: 100%;			
 			background-color: @white10;
-			.brad(0,0,5px,5px);
+			.brad();
 		}
 	}
 	&preview{
@@ -3583,7 +3617,8 @@ textarea.form__control{
 		img{
 			.brad();
 		}
-		&.is--design{
+
+		.services-item__item.is--design &{
 			img{
 				.brad(5px,5px,0,0);
 			}
@@ -4044,7 +4079,7 @@ textarea.form__control{
 			@media @media-device{margin-bottom: 20px;}
 			@media @media-screen{margin-bottom: 25px;}
 		}
-		h2, h3, h4, h5{margin-bottom: 20px}
+		h2, h3, h4, h5{margin-bottom: 15px}
 		ol{
 			line-height: @b-lh + 5;
 			& > li{margin-bottom: 10px}
@@ -4415,6 +4450,7 @@ blockquote {
 		}
 	}
 	&icon{
+		display: block;
 		position: absolute;
 		left: 0;
 		top: 50%;
@@ -4451,6 +4487,9 @@ blockquote {
 		}
 		@media @media-screen {
 			padding: 2.6vw;
+		}
+		html.msie &{
+			background: #c6a780;
 		}
 	}
 	&tab-content{

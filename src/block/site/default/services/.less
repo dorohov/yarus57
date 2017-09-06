@@ -94,7 +94,7 @@
 			position: relative;
 			height: 100%;			
 			background-color: @white10;
-			.brad(0,0,5px,5px);
+			.brad();
 		}
 	}
 	&preview{
@@ -103,7 +103,8 @@
 		img{
 			.brad();
 		}
-		&.is--design{
+
+		.services-item__item.is--design &{
 			img{
 				.brad(5px,5px,0,0);
 			}

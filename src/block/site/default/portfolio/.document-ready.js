@@ -1,2 +1,2 @@
-var url = window.location.pathname;
+var url = window.location.href;
 $('.portfolio-navbar__nav a[href="'+url+'"]').parent().addClass('is--active');  

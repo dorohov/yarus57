@@ -1,6 +1,13 @@
 .blog-page__{
 	&block{}
 	&row{}
+	&cols{
+		&.is--cols-3{
+			@media @media-size-sm {
+				.makeCols(6, 12);
+			}
+		}
+	}
 }
 .blog-card__{
 	&item{

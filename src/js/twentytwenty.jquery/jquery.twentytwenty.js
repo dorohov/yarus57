@@ -21,7 +21,7 @@
       var slider = container.find(".twentytwenty-handle");
       slider.append("<span class='twentytwenty-" + beforeDirection + "-arrow'></span>");
       slider.append("<span class='twentytwenty-" + afterDirection + "-arrow'></span>");
-      slider.append("<span class='twentytwenty-handle-inner'></span>");
+      slider.append("<span class='twentytwenty-handle-inner'></span>"); 
       container.addClass("twentytwenty-container");
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
