@@ -5,7 +5,7 @@
 
 $Azbn->entity = $Azbn->getEntity();
 
-$b_tpl = 'product';
+$b_tpl = 'work';
 
 //if (have_posts()) {
 	
