@@ -2,5 +2,5 @@ $(function(){var e="noname-browser",o=navigator.userAgent.toLowerCase();o.indexO
 var url=window.location.href;$('.blog-navbar__nav a[href="'+url+'"]').parent().addClass("is--active");
 $("img").addClass("img-responsive");
 var url=window.location.href;$('.navbar__nav a[href="'+url+'"]').parent().addClass("is--active"),$('.navbar__nav-dropdown-menu a[href="'+url+'"]').parent().addClass("is--active");
-var url=window.location.href;$('.portfolio-navbar__nav a[href="'+url+'"]').parent().addClass("is--active");
+var url=window.location.href;$('.portfolio-navbar__nav a[href="'+url+'"]').parent().addClass("is--active"),$(".portfolio-tabs__navbar li").eq(0).addClass("active"),$(".portfolio-tabs__pane-container .portfolio-tabs__pane").eq(0).addClass("active");
 $(".text__block table").addClass("table table-bordered"),$(".text__block ol").addClass("is--counts"),$(".text__block ul").addClass("is--styled"),$(".text__block .table.table-bordered").wrap('<div class="table-responsive"></div>');

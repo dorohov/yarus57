@@ -2741,7 +2741,8 @@ textarea.form__control{
 		padding-bottom: 50px;
 		position: relative;
 		@media @media-screen {
-			padding-bottom: 12.5vw;
+			padding-bottom: 12.5vw;    
+			min-height: 780px;
 		}
 	}
 	&flower{
@@ -3232,10 +3233,15 @@ textarea.form__control{
 				//.makeCols(12, 12);
 			}
 		}
+		&.is--right{
+			@media @media-notsmart {
+				order:1;
+			}
+		}
 	}
 	&text{
 		line-height: @b-lh - 4;
-		&.is--lpadding{
+		.portfolio-design-panel__cols.is--right &{
 			@media @media-screen {
 				padding-left: 2.5vw;
 			}
