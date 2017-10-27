@@ -2949,7 +2949,6 @@ textarea.form__control{
 		max-width: 570px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 35px;
 		position: relative;		
 		&::after{
 			content: '';
@@ -2963,9 +2962,6 @@ textarea.form__control{
 			@media @media-size-xs-p {
 				display: none;
 			}
-		}
-		@media @media-screen {
-			margin-bottom: 3.8vw;
 		}
 	}
 	&nav{
@@ -3014,6 +3010,18 @@ textarea.form__control{
 				width: 100%;
 				left: 0; 
 				right: inherit;
+			}
+		}
+		.portfolio-navbar__item.is--inactive &{
+			font-weight: 700;
+			font-size: @b-fs + 2;
+		    cursor: not-allowed;
+			color: lighten(@black, 80%);
+			&::after{
+				width: 100%;
+				left: 0; 
+				right: inherit;
+				background-color: lighten(@black, 80%);
 			}
 		}
 	}
@@ -3076,7 +3084,9 @@ textarea.form__control{
 	&slick-block{
 		position: relative;
 		margin-bottom: 15px;
+		padding-top: 35px;
 		@media @media-screen {
+			padding-top: 3.8vw;
 			margin-bottom: 1vw;
 		}
 	}
@@ -3222,6 +3232,13 @@ textarea.form__control{
 	}
 }
 .portfolio-design-panel__{
+	&block{		
+		padding-top: 35px;
+		@media @media-screen {
+			padding-top: 3.8vw;
+			margin-bottom: 1vw;
+		}
+	}
 	&row{
 		align-items: center;
 		padding-bottom: 20px;
