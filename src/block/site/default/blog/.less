@@ -3,6 +3,9 @@
 	&row{}
 	&cols{
 		&.is--cols-3{
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
 			@media @media-size-sm {
 				.makeCols(6, 12);
 			}
@@ -81,7 +84,10 @@
 		max-width: 600px;
 		justify-content: space-between;
 		//@media @media-size-xs-p {justify-content: center;}
-		position: relative;		
+		position: relative;	
+		@media @media-size-xs-p {
+			margin: 0 -3px; 
+		}	
 		&::after{
 			content: '';
 			position: absolute;
@@ -98,7 +104,9 @@
 	}
 	&item{
 		padding: 0 15px;
-		@media @media-size-xs-p {padding: 0; .makeCols(12, 12);}
+		@media @media-size-xs-p {
+			padding: 0 3px!important; 
+		}
 		&:first-child{
 			padding-left: 0;
 		}

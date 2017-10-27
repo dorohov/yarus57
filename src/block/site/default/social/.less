@@ -61,13 +61,13 @@
 			display: inline-block;
 			&, &:hover, &:focus{color: @b-color;}
 			padding-left: 10px;	
-			margin-bottom: 35px;
+			margin-bottom: 25px;
 			@media @media-notsmart {padding-left: 20px;	}
 			@media @media-screen-lg {
 				margin-bottom: 2.5vw;
 			}
 			&:first-child{
-				padding-left: ~"calc((@{soc-size} + 2px) + 10px)";
+				padding-left: ~"calc((@{soc-size} - 6px) + 10px)";
 				@media @media-notsmart {
 					padding-left: ~"calc((@{soc-size} + 8px) + 20px)";
 				}
@@ -147,9 +147,9 @@
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			width: @soc-size + 2; 
-			height: @soc-size + 2;
-			padding: 7px;
+			width: @soc-size - 6; 
+			height: @soc-size - 6;
+			padding: 6px;
 			@media @media-notsmart {
 				width: @soc-size + 8; 
 				height: @soc-size + 8;
@@ -229,8 +229,8 @@
 			.calcLineHeight(20, 29, 320, 1680);
 		}
 		.social__item.is--contacts-page &{
-			.calcFontSize(14, 26, 320, 1680);
-			.calcLineHeight(16, 28, 320, 1680);
+			.calcFontSize(12, 26, 320, 1680);
+			.calcLineHeight(14, 28, 320, 1680);
 			@media @media-size-sm{
 				.calcFontSize(20, 22, 1025, 1200);
 				.calcLineHeight(22, 24, 1025, 1200);
