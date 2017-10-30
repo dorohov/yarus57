@@ -366,6 +366,17 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 99994;
+    width: 64px;
+    height: 64px;
+    transition: @trs-site;
+    &, &:focus, &:hover{
+      background-color: #fff;
+      color: #000;
+    }
+    &:hover{
+      background-color: @b-color-a;
+      color: @white;
+    }
   }
 }
 
@@ -396,10 +407,10 @@
   opacity: 0.5; }
 
 .fancybox-button--left::after {
-  left: 20px;
-  top: 18px;
-  width: 6px;
-  height: 6px;
+  left: 25px;
+  top: 25px;
+  width: 16px;
+  height: 16px;
   background: transparent;
   border-top: solid 2px currentColor;
   border-right: solid 2px currentColor;
@@ -408,10 +419,10 @@
   transform: rotate(-135deg); }
 
 .fancybox-button--right::after {
-  right: 20px;
-  top: 18px;
-  width: 6px;
-  height: 6px;
+  right: 25px;
+  top: 25px;
+  width: 16px;
+  height: 16px;
   background: transparent;
   border-top: solid 2px currentColor;
   border-right: solid 2px currentColor;
@@ -420,12 +431,12 @@
   transform: rotate(45deg); }
 
 .fancybox-button--left {
-  border-radius: 0 5px 5px 0; 
+  border-radius: 0 50% 50% 0; 
   left: 0;
 }
 
 .fancybox-button--right {
-  border-radius: 5px 0 0 5px; 
+  border-radius: 50% 0 0 50%; 
   right: 0;
 }
 

@@ -1369,7 +1369,7 @@
 			opacity: 0;
 		}
 		.form__radio-input:checked + &{			
-			border-color: @b-form-i-border-f;
+			//border-color: @b-form-i-border-f;
 			&::before{			
 				opacity: 1;	
 				transform: scale(1) rotateZ(0deg);
@@ -2858,6 +2858,7 @@ textarea.form__control{
 		width: 100%;
 		top: 0;
 		left: 0;
+		z-index: 1;
 		//height: 400px;
 		//transform: translateX(-100%);
 		transition: all 0.3s ease-in, transform 0s ease-in 0.5s;	
@@ -2867,6 +2868,7 @@ textarea.form__control{
 		}
 		&.active{
 			opacity: 1;
+			z-index: 2;
 			//transform: translateX(0);
 			transition: all 0.3s ease-in 0.45s;
 		}
@@ -2912,6 +2914,7 @@ textarea.form__control{
 		}
 		&.is--page{
 			max-width: 520px;
+			margin-bottom: 20px;
 		}
 		&.is--repairs{
 			max-width: 520px;
