@@ -3280,10 +3280,22 @@ textarea.form__control{
 		}
 	}
 	&text{
-		line-height: @b-lh - 4;
+		font-size: @b-fs + 2;
+		line-height: @b-lh;
+		@media @media-size-xxl {
+			max-width: 80%;
+    		margin-left: auto;
+		}	
+		&.is--lpadding{
+			@media @media-screen {
+				padding-left: 2.5vw;
+				margin-left: 0;
+			}
+		}
 		.portfolio-design-panel__cols.is--right &{
 			@media @media-screen {
 				padding-left: 2.5vw;
+				margin-left: 0;
 			}
 		}
 	}
