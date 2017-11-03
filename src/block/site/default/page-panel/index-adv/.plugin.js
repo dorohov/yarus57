@@ -2,7 +2,7 @@
 	"use strict";
 
 	var form = $('.azbn-valid-form');	
-	form.find('.azbn-step .azbn-btn').addClass('is--hidden');
+	//form.find('.azbn-step .azbn-btn').addClass('is--hidden');
 	
 	form.find('.azbn-step').each(function(index){ 
 		
