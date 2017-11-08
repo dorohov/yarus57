@@ -34,7 +34,7 @@ $(function() {
 			nav: true,
 			dots: false,
 			smartSpeed: 500,
-			loop: true,
+			loop: false,
 			margin: 0,
 			items:1,
 			

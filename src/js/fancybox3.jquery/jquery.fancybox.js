@@ -1,4 +1,5 @@
 [[azbntple tpl="/src/block/fancybox3/js/core.js" ]]
+$.fancybox.defaults.loop = false;
 [[azbntple tpl="/src/block/fancybox3/js/fullscreen.js" ]]
 [[azbntple tpl="/src/block/fancybox3/js/guestures.js" ]]
 [[azbntple tpl="/src/block/fancybox3/js/hash.js" ]]
