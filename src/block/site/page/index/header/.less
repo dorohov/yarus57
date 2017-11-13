@@ -36,16 +36,20 @@
 			min-height: 52vw;
 		}
 		@media @media-size-md{
-			min-height: ~"calc(85vh - @{navbar-md})";			
+			min-height: ~"calc(85vh - @{navbar-md})";	
+			max-height: ~"calc(820px - @{navbar-md})";			
 		}
 		@media @media-screen-lg{
-			height: ~"calc(85vw - @{navbar-screen})";			
+			height: ~"calc(85vw - @{navbar-screen})";	
+			max-height: ~"calc(820px - @{navbar-screen})";		
 		}
 		@media @media-size-lg{	
 			height: ~"calc(85vw - @{navbar-lg})";
+			max-height: ~"calc(820px - @{navbar-lg})";
 		}
 		@media @media-size-xl{	
 			height: ~"calc(85vw - @{navbar-xl})";
+			max-height: ~"calc(820px - @{navbar-index-xl})";
 		}
 		@media @media-size-xxl{	
 			height: ~"calc(85vw - @{navbar-index-xxl})";
@@ -76,6 +80,30 @@
 			width: 100%;
 			height: 100%;
 			background: linear-gradient(135deg, fadeout(@black, 30%) 0%,fadeout(@white, 100%) 100%);
+		}
+	}
+	&carousel-control{
+		@media @media-device {
+			display: none;
+		}
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		transform: translateY(-50%);
+		color: @white;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+		border-radius: 10px;
+		&:hover{
+			color: @white;
+			background-color: @b-color-a;
+		}
+		&.left{
+			left: 5px;
+		}
+		&.right{
+			right: 5px;
 		}
 	}
 	&inner{
