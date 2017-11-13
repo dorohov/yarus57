@@ -8,7 +8,7 @@ $(function() {
 		
 		slider.slick({
 			slidesToShow: 1,
-			slidesToScroll: 0,
+			slidesToScroll: 1,
 			arrows: true,
 			draggable: false,
 			swipe: false,
@@ -21,7 +21,7 @@ $(function() {
 		});
 		$('.slick-nav[data-uid="' + uid + '"]').slick({
 			slidesToShow: 5,
-			slidesToScroll: 0,
+			slidesToScroll: 1,
 			asNavFor: '.slick-center[data-uid="' + uid + '"]',
 			arrows: false,
 			centerMode: true,
