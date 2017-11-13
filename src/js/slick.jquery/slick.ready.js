@@ -24,7 +24,7 @@ $(function() {
 			slidesToScroll: 1,
 			asNavFor: '.slick-center[data-uid="' + uid + '"]',
 			arrows: false,
-			centerMode: true,
+			//centerMode: true,
 			focusOnSelect: true,
 			draggable: false,
 			swipe: false,
