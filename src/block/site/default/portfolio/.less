@@ -201,11 +201,11 @@
 }
 .portfolio-navbar__{
 	&block{
-		max-width: 570px;
+		//max-width: 570px;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;		
-		&::after{
+		/*&::after{
 			content: '';
 			position: absolute;
 			z-index: 1;
@@ -217,26 +217,29 @@
 			@media @media-size-xs-p {
 				display: none;
 			}
-		}
+		}*/
 	}
 	&nav{
 		list-style: none;
-		margin: 0 -15px;
+		margin: -20px -15px 0;
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		//justify-content: space-between;
+		justify-content: center;
 		//@media @media-size-xs-p {justify-content: center;}
 	}
 	&item{
-		padding: 0 15px;
+		padding: 20px 15px 0;
 		@media @media-size-xs-p {.makeCols(12, 12);}
 	}
 	&link{
 		display: inline-block;
-		padding: 10px 0px;
+		padding: 10px 30px;
 		position: relative;
-		&::after{
+		border: 1px solid @b-color-a;
+		border-radius: 25px;
+		/*&::after{
 			content: '';
 			position: absolute;
 			z-index: 2;
@@ -248,36 +251,40 @@
 			transition: @trs-site;
 			background-color: @b-color-a;
 			border-radius: 2px;
-		}
+		}*/
 		&:hover{
-			&::after{
+			color: @white;
+			background-color: @b-color-a;
+			/*&::after{
 				width: 100%;
 				left: 0; 
 				right: inherit;
-			}
+			}*/
 		}
 		.portfolio-navbar__item.is--active &{
 			font-weight: 700;
-			font-size: @b-fs + 2;
+			//font-size: @b-fs + 2;
 			cursor: default;
-			color: darken(@b-color-a, 15%);
+			color: @white;
+			background-color: @b-color-a;
+			/*
 			&::after{
 				width: 100%;
 				left: 0; 
 				right: inherit;
-			}
+			}*/
 		}
 		.portfolio-navbar__item.is--inactive &{
 			font-weight: 700;
 			font-size: @b-fs + 2;
 		    cursor: not-allowed;
 			color: lighten(@black, 80%);
-			&::after{
+			/*&::after{
 				width: 100%;
 				left: 0; 
 				right: inherit;
 				background-color: lighten(@black, 80%);
-			}
+			}*/
 		}
 	}
 }
